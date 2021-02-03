@@ -2,10 +2,33 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Dashboard extends React.Component {
+    state = {
+        questionsShown: "unanswered"
+    }
     render() {
-        console.log(this.props)
+        const { questionsShown } = this.state;
+        console.log(this.props);
         return (
             <div>
+                <ul>
+                    <li 
+                        className= {questionsShown === "unanswered" ? "active" : ""}
+                        
+                    >
+                        Unanswered
+                    </li>
+                    <li 
+                        className= {questionsShown === "answered" ? "active" : ""}
+                        
+                    >
+                        Answered
+                    </li>
+                </ul>
+                <div>
+                    {}
+
+                </div>
+
 
             </div>
         )
