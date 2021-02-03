@@ -5,7 +5,7 @@ import { setAuthedUser } from './authedUser'
 
 
 // TODO: authentication process
-const AUTHED_ID = "" // Coming from sign in 
+const AUTHED_ID = 'sarahedo' // Coming from sign in 
 
 
 export function handleInitialData() {

@@ -7,7 +7,20 @@ class Dashboard extends React.Component {
     }
     render() {
         const { questionsShown } = this.state;
+        const { questionsIds, authedUser, users } = this.props;
+        
+        
+        
         console.log(this.props);
+        console.log(users[authedUser])
+        let userAnswers = []
+        if (authedUser !== null) {
+            userAnswers = Object.keys(users[authedUser].answers)
+
+        }
+        console.log(userAnswers)
+        
+        
         return (
             <div>
                 <ul>
@@ -25,7 +38,8 @@ class Dashboard extends React.Component {
                     </li>
                 </ul>
                 <div>
-                    {}
+                    { 
+                    }
 
                 </div>
 
@@ -35,8 +49,10 @@ class Dashboard extends React.Component {
     }
 }
 
-function mapStateToProps({ questions }) {
+function mapStateToProps({ questions, users, authedUser }) {
     return {
+        authedUser,
+        users,
         questionsIds: Object.keys(questions)
             .sort((a,b) => questions[b].timestamp - questions[a].timestamp)
     }
