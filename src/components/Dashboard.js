@@ -5,6 +5,18 @@ class Dashboard extends React.Component {
     state = {
         questionsShown: "unanswered"
     }
+    handleClickUnanswered = (e) => {
+        e.preventDefault();
+        this.setState({
+            questionsShown : "unanswered"
+        });
+    }
+    handleClickAnswered = (e) => {
+        e.preventDefault();
+        this.setState({
+            questionsShown: "answered"
+        })
+    }
     render() {
         const { questionsShown } = this.state;
         const { questionsIds, authedUser, users } = this.props;
@@ -27,12 +39,14 @@ class Dashboard extends React.Component {
                 <ul>
                     <li 
                         className= {questionsShown === "unanswered" ? "active" : ""}
+                        onClick = {this.handleClickUnanswered}
                         
                     >
                         Unanswered
                     </li>
                     <li 
                         className= {questionsShown === "answered" ? "active" : ""}
+                        onClick = {this.handleClickAnswered}
                         
                     >
                         Answered
