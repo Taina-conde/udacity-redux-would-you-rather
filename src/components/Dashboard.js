@@ -18,6 +18,7 @@ class Dashboard extends React.Component {
             userAnswers = Object.keys(users[authedUser].answers)
 
         }
+        const unansweredQuestionsIds = questionsIds.filter(questionId => (!userAnswers.includes(questionId)))
         console.log(userAnswers)
         
         
@@ -38,8 +39,26 @@ class Dashboard extends React.Component {
                     </li>
                 </ul>
                 <div>
-                    { 
+                    { questionsShown === "unanswered" && (
+                        <ul>
+                            {unansweredQuestionsIds.map(questionId => (
+                                <li key = {questionId}>
+                                    Question component
+                                </li>
+                            ))}
+                        </ul>
+                    )
                     }
+                    {questionsShown === "answered" && (
+                        <ul>
+                            {userAnswers.map(questionId => (
+                                <li key = {questionId}>
+                                    Question Component
+
+                                </li>
+                            ))}
+                        </ul>
+                    )}
 
                 </div>
 
