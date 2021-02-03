@@ -25,12 +25,14 @@ class Dashboard extends React.Component {
         
         console.log(this.props);
         console.log(users[authedUser])
-        let userAnswers = []
+        let userAnswers = [];
+        let unansweredQuestionsIds = [];
         if (authedUser !== null) {
             userAnswers = Object.keys(users[authedUser].answers)
+            unansweredQuestionsIds = questionsIds.filter(questionId => (!userAnswers.includes(questionId)))
 
         }
-        const unansweredQuestionsIds = questionsIds.filter(questionId => (!userAnswers.includes(questionId)))
+        
         console.log(userAnswers)
         
         
