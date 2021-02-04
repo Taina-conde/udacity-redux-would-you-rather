@@ -10,4 +10,11 @@ class Question extends React.Component {
         )
     }
 }
+
+function mapStateToProps({questions, authedUser}, {id}) {
+    return {
+        authedUser,
+        question: questions[id]
+    }
+}
 export default connect()(Question);
