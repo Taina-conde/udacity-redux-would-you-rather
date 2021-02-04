@@ -10,11 +10,18 @@ class App extends React.Component {
   render() {
     return (
       <div >
-          <Dashboard/>
+        {
+          this.props.loading === true ? null : <Dashboard/>
+        }
       </div>
     );
   }
   
 }
+function mapStateToProps({ authedUser }) {
+  return {
+    loading: authedUser === null 
+  }
+}
 
-export default connect()(App);
+export default connect(mapStateToProps)(App);
