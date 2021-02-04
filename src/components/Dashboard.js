@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Question from './Question';
 
 class Dashboard extends React.Component {
     state = {
@@ -15,7 +16,7 @@ class Dashboard extends React.Component {
         e.preventDefault();
         this.setState({
             questionsShown: "answered"
-        })
+        });
     }
     render() {
         const { questionsShown } = this.state;
@@ -59,7 +60,7 @@ class Dashboard extends React.Component {
                         <ul>
                             {unansweredQuestionsIds.map(questionId => (
                                 <li key = {questionId}>
-                                    Question component
+                                    <Question id = {questionId}/>
                                 </li>
                             ))}
                         </ul>
@@ -69,7 +70,7 @@ class Dashboard extends React.Component {
                         <ul>
                             {userAnswers.map(questionId => (
                                 <li key = {questionId}>
-                                    Question Component
+                                    <Question id = {questionId}/>
 
                                 </li>
                             ))}
