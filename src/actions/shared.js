@@ -1,7 +1,9 @@
 import { getInitialData } from '../utils/api'
-import { receiveQuestions } from './questions'
-import { receiveUsers } from './users'
+import { receiveQuestions, saveAnswer } from './questions'
+import { receiveUsers, saveUserAnwers } from './users'
 import { setAuthedUser } from './authedUser'
+import { saveQuestionAnswer } from '../utils/api'
+
 
 
 // TODO: authentication process
@@ -18,4 +20,13 @@ export function handleInitialData() {
 
             })
     }
+}
+
+export function handleSaveAnswer(info) {
+    return (dispatch) => {
+        dispatch(saveAnswer(info))
+        dispatch(saveUserAnwers(info))
+        return saveQuestionAnswer(info)
+    }
+
 }

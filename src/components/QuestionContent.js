@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { handleSaveAnswer } from '../actions/questions';
+import { handleSaveAnswer } from '../actions/shared';
 
 class QuestionContent extends React.Component {
 
@@ -70,7 +70,7 @@ class QuestionContent extends React.Component {
                         />
                         <label htmlFor="optionTwo">{question.optionTwo.text}</label>
                         <br/>
-                        <button type = 'submit'>Submit</button>
+                        <button type = 'submit' disabled = {this.state.answer === ""}>Submit</button>
                     </form>
                 </div>
             </div>
@@ -81,7 +81,8 @@ function mapStateToProps({questions, users, authedUser}, { id }) {
     return {
         question: questions[id],
         user: users[authedUser],
-        qid : id
+        qid : id,
+        authedUser,
     }
 }
 export default connect(mapStateToProps)(QuestionContent);
