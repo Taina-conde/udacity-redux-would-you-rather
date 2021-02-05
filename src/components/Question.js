@@ -37,7 +37,7 @@ class Question extends React.Component {
                                 )
                             }
                             { parent === "QuestionPage"
-                                && <QuestionContent/>
+                                && <QuestionContent id = {id}/>
                             }
                         </div>
                     </div>

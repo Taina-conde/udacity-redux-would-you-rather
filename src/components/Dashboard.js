@@ -63,6 +63,7 @@ class Dashboard extends React.Component {
                                     <Question 
                                         id = {questionId}
                                         parent = "dashboard"
+                                        category = {questionsShown}
                                     />
                                 </li>
                             ))}
@@ -76,6 +77,7 @@ class Dashboard extends React.Component {
                                     <Question 
                                         id = {questionId}
                                         parent = "dashboard"
+                                        category = {questionsShown}
                                     />
 
                                 </li>
