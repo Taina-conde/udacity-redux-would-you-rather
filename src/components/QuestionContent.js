@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 class QuestionContent extends React.Component {
     render() {
         const { question, user } = this.props;
-        console.log('user', user)
-        console.log('questioon', question)
         const userAnswered = Object.keys(user.answers).includes(question.id);
         if (userAnswered === true) {
             const numOptionOneVotes = question.optionOne.votes.length;
@@ -32,14 +30,22 @@ class QuestionContent extends React.Component {
         }
         return (
             <div>
-                {}
+                <h3>Whould you rather...</h3>
+                <div>
+                    <form>
+                        <input type="checkbox" id="optionOne" name="optionOne" value="optionOne"/>
+                        <label htmlFor="optionOne"> {question.optionOne.text}</label><br/>
+                        <input type="checkbox" id="optionTwo" name="optionTwo" value="optionTwo"/>
+                        <label htmlFor="optionTwo">{question.optionTwo.text}</label><br/>
+                        <button type = 'submit'>Submit</button>
+                    </form>
+                </div>
             </div>
         )
     }
 }
 function mapStateToProps({questions, users, authedUser}, { id }) {
     return {
-        questions,
         question: questions[id],
         user: users[authedUser]
     }
