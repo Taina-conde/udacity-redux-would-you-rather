@@ -1,14 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import QuestionContent from './QuestionContent';
-
-
 
 class Question extends React.Component {
     render(){
         const {authedUser, users, question, id, parent} = this.props;
+        console.log(question.author)
         return (
+            
             <div>
+            {/**TODO: replace the outer div with <Link to = {`/questions/${id}`}.
+            I cant do it now because of error in dependency when installing 
+            react-router-dom
+            */}
                 <div>
                     <h4>{`${question.author} asks:`}</h4>
                 </div>
@@ -31,12 +36,17 @@ class Question extends React.Component {
                                         </div>
                                         {/* TODO: add Link of react-router-dom to /questions/:questionId */}
                                         
+                                        {/** TODO: erase the following QuestionContent component. 
+                                         * This component is here just for debug purposes. 
+                                         */}
+                                        <QuestionContent id = {id}/>
+                                        
                                     </div>
                                     
 
                                 )
                             }
-                            { parent === "QuestionPage"
+                            { parent === "questionPage"
                                 && <QuestionContent id = {id}/>
                             }
                         </div>

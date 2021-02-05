@@ -4,11 +4,13 @@ import {connect} from 'react-redux';
 class QuestionContent extends React.Component {
     render() {
         const { question, user } = this.props;
-        const userAnswered = user.answers.includes(question.id);
+        console.log('user', user)
+        console.log('questioon', question)
+        const userAnswered = Object.keys(user.answers).includes(question.id);
         if (userAnswered === true) {
-            const numOptionOneVotes = question.optionOne.votes.length
-            const numOptionTwoVotes = question.optionTwo.votes.length 
-            const totalVotes = numOptionOneVotes + numOptionTwoVotes
+            const numOptionOneVotes = question.optionOne.votes.length;
+            const numOptionTwoVotes = question.optionTwo.votes.length; 
+            const totalVotes = numOptionOneVotes + numOptionTwoVotes;
             
             return (
                 <div>
@@ -37,6 +39,7 @@ class QuestionContent extends React.Component {
 }
 function mapStateToProps({questions, users, authedUser}, { id }) {
     return {
+        questions,
         question: questions[id],
         user: users[authedUser]
     }
