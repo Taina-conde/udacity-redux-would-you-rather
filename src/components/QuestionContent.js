@@ -3,8 +3,26 @@ import {connect} from 'react-redux';
 
 class QuestionContent extends React.Component {
 
+    state = {
+        optionOneSelected: false,
+        optionTwoSelected: false
+    }
+    handleOptionOne = () => {
+        this.setState({
+            optionOneSelected : !this.state.optionOneSelected,
+        })
+    }
+    handleOptionTwo = () => {
+        this.setState({
+            optionTwoSelected : !this.state.optionTwoSelected,
+        })
+    }
     handleSubmit = (e) => {
         e.preventDefault();
+        /*
+        *TODO: dispatch save answer action
+        
+        */
 
     }
 
@@ -39,10 +57,24 @@ class QuestionContent extends React.Component {
                 <h3>Whould you rather...</h3>
                 <div>
                     <form onSubmit = {this.handleSubmit}>
-                        <input type="radio" id="optionOne" name="option" value="optionOne"/>
-                        <label htmlFor="optionOne"> {question.optionOne.text}</label><br/>
-                        <input type="radio" id="optionTwo" name="option" value="optionTwo"/>
-                        <label htmlFor="optionTwo">{question.optionTwo.text}</label><br/>
+                        <input 
+                            type="radio" 
+                            id="optionOne"
+                            name="option" 
+                            value="optionOne"
+                            onChange = {this.handleOptionOne}
+                        />
+                        <label htmlFor="optionOne"> {question.optionOne.text}</label>
+                        <br/>
+                        <input 
+                            type="radio" 
+                            id="optionTwo" 
+                            name="option" 
+                            value="optionTwo"
+                            onChange = {this.handleOptionTwo}
+                        />
+                        <label htmlFor="optionTwo">{question.optionTwo.text}</label>
+                        <br/>
                         <button type = 'submit'>Submit</button>
                     </form>
                 </div>
