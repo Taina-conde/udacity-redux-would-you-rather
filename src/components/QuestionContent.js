@@ -39,9 +39,9 @@ class QuestionContent extends React.Component {
                 <h3>Whould you rather...</h3>
                 <div>
                     <form onSubmit = {this.handleSubmit}>
-                        <input type="radio" id="optionOne" name="optionOne" value="optionOne"/>
+                        <input type="radio" id="optionOne" name="option" value="optionOne"/>
                         <label htmlFor="optionOne"> {question.optionOne.text}</label><br/>
-                        <input type="radio" id="optionTwo" name="optionTwo" value="optionTwo"/>
+                        <input type="radio" id="optionTwo" name="option" value="optionTwo"/>
                         <label htmlFor="optionTwo">{question.optionTwo.text}</label><br/>
                         <button type = 'submit'>Submit</button>
                     </form>
