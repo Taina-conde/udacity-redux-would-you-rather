@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
+
 class Question extends React.Component {
     render(){
-        const {authedUser, user, question} = this.props;
+        const {authedUser, user, question, id, parent} = this.props;
         return (
             <div>
                 <div>
@@ -14,7 +16,26 @@ class Question extends React.Component {
                         <img src = {users[question.author].avatar.avatarURL} alt = {`avatar-${question.author}`}/>
                     </div>
                     <div className = "question-content">
+                        
+                        <div>
+                            { parent === 'dashboard'
+                                && (
+                                    <div>
+                                        <span>Would you rather:</span>
+                                        <div className = "text-truncate">
+                                            {question.optionOne.text} or {question.optionTwo.text}
+                                        </div>
+                                        {/* TODO: add Link of react-router-dom to /questions/:questionId */}
+                                        
+                                    </div>
+                                    
 
+                                )
+                            }
+                            { parent === "QuestionPage"
+                                && <QuestionContent/>
+                            }
+                        </div>
                     </div>
                 </div>
 

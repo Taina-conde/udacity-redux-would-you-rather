@@ -60,7 +60,10 @@ class Dashboard extends React.Component {
                         <ul>
                             {unansweredQuestionsIds.map(questionId => (
                                 <li key = {questionId}>
-                                    <Question id = {questionId}/>
+                                    <Question 
+                                        id = {questionId}
+                                        parent = "dashboard"
+                                    />
                                 </li>
                             ))}
                         </ul>
@@ -70,7 +73,10 @@ class Dashboard extends React.Component {
                         <ul>
                             {userAnswers.map(questionId => (
                                 <li key = {questionId}>
-                                    <Question id = {questionId}/>
+                                    <Question 
+                                        id = {questionId}
+                                        parent = "dashboard"
+                                    />
 
                                 </li>
                             ))}
