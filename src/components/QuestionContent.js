@@ -1,28 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { handleSaveAnswer } from '../actions/questions';
 
 class QuestionContent extends React.Component {
 
     state = {
-        optionOneSelected: false,
-        optionTwoSelected: false
+        answer: ""
     }
-    handleOptionOne = () => {
+    handleChange = (e) => {
         this.setState({
-            optionOneSelected : !this.state.optionOneSelected,
+            answer : e.target.value
         })
     }
-    handleOptionTwo = () => {
-        this.setState({
-            optionTwoSelected : !this.state.optionTwoSelected,
-        })
-    }
+    
     handleSubmit = (e) => {
         e.preventDefault();
-        /*
-        *TODO: dispatch save answer action
-        
-        */
+       const {dispatch, authedUser, qid } = this.props;
+       const { answer } = this.state;
+       dispatch(handleSaveAnswer({authedUser, qid, answer}))
 
     }
 
@@ -62,7 +57,7 @@ class QuestionContent extends React.Component {
                             id="optionOne"
                             name="option" 
                             value="optionOne"
-                            onChange = {this.handleOptionOne}
+                            onChange = {this.handleChange}
                         />
                         <label htmlFor="optionOne"> {question.optionOne.text}</label>
                         <br/>
@@ -71,7 +66,7 @@ class QuestionContent extends React.Component {
                             id="optionTwo" 
                             name="option" 
                             value="optionTwo"
-                            onChange = {this.handleOptionTwo}
+                            onChange = {this.handleChange}
                         />
                         <label htmlFor="optionTwo">{question.optionTwo.text}</label>
                         <br/>
@@ -85,7 +80,8 @@ class QuestionContent extends React.Component {
 function mapStateToProps({questions, users, authedUser}, { id }) {
     return {
         question: questions[id],
-        user: users[authedUser]
+        user: users[authedUser],
+        qid : id
     }
 }
 export default connect(mapStateToProps)(QuestionContent);
