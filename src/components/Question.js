@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import QuestionContent from './QuestionContent';
 
 
 
 class Question extends React.Component {
     render(){
-        const {authedUser, user, question, id, parent} = this.props;
+        const {authedUser, users, question, id, parent} = this.props;
         return (
             <div>
                 <div>
@@ -44,11 +45,11 @@ class Question extends React.Component {
     }
 }
 
-function mapStateToProps({questions, authedUser users}, {id}) {
+function mapStateToProps({questions, authedUser, users}, {id}) {
     return {
         authedUser,
         users,
         question: questions[id]
     }
 }
-export default connect()(Question);
+export default connect(mapStateToProps)(Question);
