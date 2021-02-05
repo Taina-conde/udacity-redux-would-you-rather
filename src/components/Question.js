@@ -14,7 +14,10 @@ class Question extends React.Component {
                 </div>
                 <div>
                     <div className = "user-avatar">
-                        <img src = {users[question.author].avatar.avatarURL} alt = {`avatar-${question.author}`}/>
+                        <img 
+                            src = {users[question.author].avatar.avatarURL} 
+                            alt = {`avatar-${question.author}`}
+                            style = {{height: "100px"}}/> {/**TODO: add styles with className */}
                     </div>
                     <div className = "question-content">
                         
