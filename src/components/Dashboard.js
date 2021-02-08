@@ -26,15 +26,15 @@ class Dashboard extends React.Component {
         
         console.log(this.props);
         console.log(users[authedUser])
-        let userAnswers = [];
+        let answeredQuestionsIds = [];
         let unansweredQuestionsIds = [];
         if (authedUser !== null) {
-            userAnswers = Object.keys(users[authedUser].answers)
-            unansweredQuestionsIds = questionsIds.filter(questionId => (!userAnswers.includes(questionId)))
+            answeredQuestionsIds = Object.keys(users[authedUser].answers)
+            unansweredQuestionsIds = questionsIds.filter(questionId => (!answeredQuestionsIds.includes(questionId)))
 
         }
         
-        console.log(userAnswers)
+       
         
         
         return (
@@ -56,10 +56,12 @@ class Dashboard extends React.Component {
                     </li>
                 </ul>
                 <div>
-                    { questionsShown === "unanswered" && (
+                    
+                    {questionsShown === "unanswered" && (
                         <ul>
                             {unansweredQuestionsIds.map(questionId => (
                                 <li key = {questionId}>
+                                    {console.log("unanswered id: ",questionId)}
                                     <Question 
                                         id = {questionId}
                                         parent = "dashboard"
@@ -70,10 +72,12 @@ class Dashboard extends React.Component {
                         </ul>
                     )
                     }
-                    {questionsShown === "answered" && (
+                    {questionsShown === "answered" && 
+                    (
                         <ul>
-                            {userAnswers.map(questionId => (
+                            {answeredQuestionsIds.map(questionId => (
                                 <li key = {questionId}>
+                                    {console.log("answerd Id: ", questionId)}
                                     <Question 
                                         id = {questionId}
                                         parent = "dashboard"

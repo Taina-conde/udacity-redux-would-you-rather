@@ -7,8 +7,13 @@ import QuestionContent from './QuestionContent';
 class Question extends React.Component {
     render(){
         const {authedUser, users, question, id, parent} = this.props;
-        console.log(question.author)
+        console.log(question)
+        console.log('id: ', id)
+        if (question === undefined) {
+            return null
+        }
         return (
+
             
             <div>
             {/**TODO: replace the outer div with <Link to = {`/questions/${id}`}.

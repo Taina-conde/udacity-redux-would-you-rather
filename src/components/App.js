@@ -13,19 +13,19 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-          <div >
+          
           {
             this.props.loading === true 
               ? null 
-              : <div>
-                <Route path = '/' exact component = {Dashboard}/>
-                <Route patth = '/questions/:id' component = {QuestionPage}/>
+              : (<div>
+                  <Route path = '/' exact component = {Dashboard}/>
+                  <Route patth = '/questions/:id' component = {QuestionPage}/>
 
-              </div>
+              </div>)
             
           }
 
-          </div>
+          
       </Router>
      
     );
