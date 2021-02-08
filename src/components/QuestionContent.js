@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { handleSaveAnswer } from '../actions/shared';
+import { withRouter } from 'react-router-dom';
 
 class QuestionContent extends React.Component {
 
@@ -17,7 +18,9 @@ class QuestionContent extends React.Component {
         e.preventDefault();
        const {dispatch, authedUser, qid } = this.props;
        const { answer } = this.state;
-       dispatch(handleSaveAnswer({authedUser, qid, answer}))
+       dispatch(handleSaveAnswer({authedUser, qid, answer}));
+       this.props.history.push('/');
+
 
     }
 
@@ -70,7 +73,12 @@ class QuestionContent extends React.Component {
                         />
                         <label htmlFor="optionTwo">{question.optionTwo.text}</label>
                         <br/>
-                        <button type = 'submit' disabled = {this.state.answer === ""}>Submit</button>
+                        <button 
+                            type = 'submit' 
+                            disabled = {this.state.answer === ""}
+                        >
+                                Submit
+                        </button>
                     </form>
                 </div>
             </div>
@@ -85,4 +93,4 @@ function mapStateToProps({questions, users, authedUser}, { id }) {
         authedUser,
     }
 }
-export default connect(mapStateToProps)(QuestionContent);
+export default withRouter(connect(mapStateToProps)(QuestionContent));
