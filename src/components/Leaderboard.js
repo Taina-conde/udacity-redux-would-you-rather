@@ -8,14 +8,16 @@ class Leaderboard extends React.Component {
         const usersAndScoresArr = usersIds.map( id => {
             const numQuestionsAnswered = Object.keys(users[id].answers).length;
             const numQuestionsAsked = users[id].questions.length;
-            const sum = numQuestionsAnswered + numQuestionsAsked;
+            const score = numQuestionsAnswered + numQuestionsAsked;
             const user = users[id]
             return {
                 user,
-                sum,
+                score,
             }
         })
-        console.log(usersAndScoresArr)
+        
+        usersAndScoresArr.sort( (a,b) => (b.score - a.score))
+        
 
 
         return (
@@ -23,32 +25,16 @@ class Leaderboard extends React.Component {
                 <ul>
                     {usersAndScoresArr.map( userScorePair => (
                         <li key = {userScorePair.user.id}>
-                            <Leader/>
+                            <Leader
+                                user = {userScorePair.user}
+                                score = {userScorePair.score}
+                            />
                            
 
                         </li>
                     ))}
                 </ul>
-                <div>
-                    <div>
-                        <img
-                            src = ''
-                            alt = ""
-                        />
-                    </div>
-                    <div>
-                        <h1>User name</h1>
-                    </div>
-                    <div>
-                        Answered questions:
-                    </div>
-                    <div>
-                        Created questions: 
-                    </div>
-                    <div>
-                        Score
-                    </div>
-                </div>
+                
 
             </div>
         )
