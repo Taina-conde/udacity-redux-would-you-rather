@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import Leader from './Leader';
 
 class Leaderboard extends React.Component {
     render() {
@@ -22,6 +23,7 @@ class Leaderboard extends React.Component {
                 <ul>
                     {usersAndScoresArr.map( userScorePair => (
                         <li key = {userScorePair.user.id}>
+                            <Leader/>
                            
 
                         </li>
