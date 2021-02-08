@@ -1,7 +1,9 @@
 import React from 'react';
 import {handleInitialData} from '../actions/shared';
 import {connect} from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
+import QuestionPage from './QuestionPage';
 
 
 class App extends React.Component {
@@ -10,11 +12,22 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div >
-        {
-          this.props.loading === true ? null : <Dashboard/>
-        }
-      </div>
+      <Router>
+          <div >
+          {
+            this.props.loading === true 
+              ? null 
+              : <div>
+                <Route path = '/' exact component = {Dashboard}/>
+                <Route patth = '/questions/:id' component = {QuestionPage}/>
+
+              </div>
+            
+          }
+
+          </div>
+      </Router>
+     
     );
   }
   
