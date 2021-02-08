@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import QuestionPage from './QuestionPage';
+import Leaderboard from './Leaderboard';
 
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
               : (<div>
                   <Route path = '/' exact component = {Dashboard}/>
                   <Route path = '/questions/:questionId' component = {QuestionPage}/>
+                  <Route path = '/leaderboard' component = {Leaderboard}/>
                   
 
               </div>)
