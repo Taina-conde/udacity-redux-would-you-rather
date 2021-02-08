@@ -4,22 +4,14 @@ import {connect} from 'react-redux';
 
 class QuestionPage extends React.Component {
     render() {
-        const {question, id} = this.props;
+        const {questionId} = this.props.match.params;
         return (
             <div>
-                <Question id = {id} parent = 'questionPage'/>
+                <Question id = {questionId} parent = 'questionPage'/>
             </div>
         )
     }
 }
-function mapStateToProps({questions}, props) {
-    const { questionId } = props.match.params
-    return {
-        question : questions[questionId],
-        id : questionId,
 
-    }
 
-}
-
-export default connect(mapStateToProps)(QuestionPage);
+export default connect()(QuestionPage);
