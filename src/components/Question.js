@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import QuestionContent from './QuestionContent';
 
@@ -34,12 +35,12 @@ class Question extends React.Component {
                                         <div className = "text-truncate">
                                             {question.optionOne.text} or {question.optionTwo.text}
                                         </div>
-                                        {/* TODO: add Link of react-router-dom to /questions/:questionId */}
                                         
+                                        <Link to = {`/questions/${id}`}>View poll</Link>
                                         {/** TODO: erase the following QuestionContent component. 
                                          * This component is here just for debug purposes. 
                                          */}
-                                        <QuestionContent id = {id}/>
+                                        
                                         
                                     </div>
                                     
