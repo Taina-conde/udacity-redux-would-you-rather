@@ -13,22 +13,23 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-          
+        <React.Fragment>
           {
             this.props.loading === true 
               ? null 
               : (<div>
                   <Route path = '/' exact component = {Dashboard}/>
-                  <Route patth = '/questions/:id' component = {QuestionPage}/>
+                  <Route path = '/questions/:questionId' component = {QuestionPage}/>
+                  
 
               </div>)
             
           }
 
-          
+        </React.Fragment> 
       </Router>
      
-    );
+    )
   }
   
 }

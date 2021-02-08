@@ -9,9 +9,7 @@ class Question extends React.Component {
         const {authedUser, users, question, id, parent} = this.props;
         console.log(question)
         console.log('id: ', id)
-        if (question === undefined) {
-            return null
-        }
+        
         return (
 
             
