@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 class NewQuestion extends React.Component {
     state = {
-        optionOne: '',
-        optionTwo: ''
+        optionOneText: '',
+        optionTwoText: ''
     }
     handleChangeInputs = (event) => {
         this.setState({
@@ -14,7 +14,7 @@ class NewQuestion extends React.Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        
+
     }
     render() {
         return ( 
@@ -30,7 +30,7 @@ class NewQuestion extends React.Component {
                             type= 'text' 
                             placeholder= 'Enter option one text here'
                             onChange = {this.handleChangeInputs}
-                            name = 'optionOne'
+                            name = 'optionOneText'
                         />
                         <br/>
                         <p>OR</p>
@@ -39,11 +39,11 @@ class NewQuestion extends React.Component {
                             type= 'text'
                             placeholder = 'Enter option two text here'
                             onChange = {this.handleChangeInputs}
-                            name = 'optionTwo'
+                            name = 'optionTwoText'
                         />
                         <button 
                             type = 'submit' 
-                            disabled = {this.state.optionOne && this.state.optionTwo ? false : true }
+                            disabled = {this.state.optionOneText && this.state.optionTwoText ? false : true }
                             
                             
                         >
