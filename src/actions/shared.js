@@ -41,10 +41,17 @@ export function handleSaveAnswer(info) {
     }
 
 }
-export function handleSaveQuestion(question) {
-    return (dispatch) => {
-        dispatch(saveQuestionToQuestions(question))
-        dispatch(saveQuestionToUsers(question))
-        return saveQuestion(question)
+export function handleSaveQuestion( {optionOneText, optionTwoText}) {
+    return (dispatch, getState) => {
+        const {authedUser} = getState();
+        return saveQuestion({
+            optionOneText,
+            optionTwoText,
+            author: authedUser
+        })
+            .then((question) => {
+                dispatch(saveQuestionToQuestions(question))
+                dispatch(saveQuestionToUsers(question))
+            })
     }
 }
