@@ -1,12 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect} from 'react-redux';
 import { handleSaveQuestion } from '../actions/shared';
+import { Redirect } from 'react-router-dom';
 
 
 class NewQuestion extends React.Component {
     state = {
         optionOneText: '',
-        optionTwoText: ''
+        optionTwoText: '',
+        toHome: false
     }
     handleChangeInputs = (event) => {
         this.setState({
@@ -18,9 +20,16 @@ class NewQuestion extends React.Component {
         const {optionOneText, optionTwoText} = this.state;
         const {dispatch} = this.props;
         dispatch(handleSaveQuestion({optionOneText, optionTwoText}))
+        this.setState({
+            toHome: true
+        })
+
 
     }
     render() {
+        if (this.state.toHome === true) {
+            return <Redirect to= '/'/>
+        }
         return ( 
             <div>
                 <div>
