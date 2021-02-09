@@ -24,6 +24,12 @@ class NewQuestion extends React.Component {
                             type= 'text'
                             placeholder = 'Enter option two text here'
                         />
+                        <button 
+                            type = 'submit' 
+                            disabled = {false}
+                        >
+                                Submit
+                        </button>
                         
                     </form>
                     
