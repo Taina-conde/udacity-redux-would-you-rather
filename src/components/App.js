@@ -7,6 +7,7 @@ import QuestionPage from './QuestionPage';
 import Leaderboard from './Leaderboard';
 import NewQuestion from './NewQuestion';
 import Nav from './Nav';
+import LogInfo from './LogInfo';
 
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
               ? null 
               : (<div>
                   <Nav/>
+                  <LogInfo/>
                   <Route path = '/' exact component = {Dashboard}/>
                   <Route path = '/questions/:questionId' component = {QuestionPage}/>
                   <Route path = '/leaderboard' component = {Leaderboard}/>
