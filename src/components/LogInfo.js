@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class LogInfo extends React.Component {
+    handleClick = (event) => {
+        event.preventDefault();
+        
+    }
     render() {
         const { user } = this.props;
         return (
@@ -12,7 +16,11 @@ class LogInfo extends React.Component {
                     alt = {`Avatar of ${user.id}`}
                     style = {{height: "30px"}}
                 />
-                <button>Log out</button> 
+                <button
+                    onClick = {this.handleClick}
+                >
+                    Log out
+                </button> 
 
             </div>
 
