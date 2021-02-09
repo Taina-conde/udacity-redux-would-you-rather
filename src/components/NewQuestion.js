@@ -12,6 +12,10 @@ class NewQuestion extends React.Component {
             [event.target.name]: event.target.value
         })
     }
+    handleSubmit = (event) => {
+        event.preventDefault();
+        
+    }
     render() {
         return ( 
             <div>
@@ -19,7 +23,7 @@ class NewQuestion extends React.Component {
                     <h1>Create new question</h1>
                 </div>
                 <div>
-                    <form>
+                    <form onSubmit= {this.handleSubmit}>
                         <p> Complete the question:</p>
                         <h2>Would you rather...</h2>
                         <input 
