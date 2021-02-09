@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 
 
 class NewQuestion extends React.Component {
+    state = {
+        optionOne: '',
+        optionTwo: ''
+    }
     render() {
         return ( 
             <div>
@@ -26,7 +30,7 @@ class NewQuestion extends React.Component {
                         />
                         <button 
                             type = 'submit' 
-                            disabled = {false}
+                            disabled = {this.state.optionOne && this.state.optionTwo ? false : true }
                         >
                                 Submit
                         </button>
