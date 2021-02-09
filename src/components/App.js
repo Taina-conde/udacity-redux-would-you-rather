@@ -6,6 +6,7 @@ import Dashboard from './Dashboard';
 import QuestionPage from './QuestionPage';
 import Leaderboard from './Leaderboard';
 import NewQuestion from './NewQuestion';
+import Nav from './Nav';
 
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
             this.props.loading === true 
               ? null 
               : (<div>
+                  <Nav/>
                   <Route path = '/' exact component = {Dashboard}/>
                   <Route path = '/questions/:questionId' component = {QuestionPage}/>
                   <Route path = '/leaderboard' component = {Leaderboard}/>
