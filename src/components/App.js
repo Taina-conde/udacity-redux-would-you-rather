@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import QuestionPage from './QuestionPage';
 import Leaderboard from './Leaderboard';
+import NewQuestion from './NewQuestion';
 
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
                   <Route path = '/' exact component = {Dashboard}/>
                   <Route path = '/questions/:questionId' component = {QuestionPage}/>
                   <Route path = '/leaderboard' component = {Leaderboard}/>
+                  <Route path = '/add' component = {NewQuestion}/>
                   
 
               </div>)
