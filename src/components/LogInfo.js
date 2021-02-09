@@ -4,10 +4,17 @@ import { connect } from 'react-redux';
 class LogInfo extends React.Component {
     render() {
         return (
-            <div></div>
+            <div>
+                <p>Hello, </p>
+            </div>
 
         )
     }
 }
+function mapStateToProps({users, authedUser}) {
+    return {
+        user: users[authedUser]
+    }
+}
 
-export default connect()(LogInfo);
+export default connect(mapStateToProps)(LogInfo);
