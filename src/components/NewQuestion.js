@@ -7,6 +7,11 @@ class NewQuestion extends React.Component {
         optionOne: '',
         optionTwo: ''
     }
+    handleChangeInputs = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
     render() {
         return ( 
             <div>
@@ -20,6 +25,8 @@ class NewQuestion extends React.Component {
                         <input 
                             type= 'text' 
                             placeholder= 'Enter option one text here'
+                            onChange = {this.handleChangeInputs}
+                            name = 'optionOne'
                         />
                         <br/>
                         <p>OR</p>
@@ -27,10 +34,14 @@ class NewQuestion extends React.Component {
                         <input
                             type= 'text'
                             placeholder = 'Enter option two text here'
+                            onChange = {this.handleChangeInputs}
+                            name = 'optionTwo'
                         />
                         <button 
                             type = 'submit' 
                             disabled = {this.state.optionOne && this.state.optionTwo ? false : true }
+                            
+                            
                         >
                                 Submit
                         </button>
