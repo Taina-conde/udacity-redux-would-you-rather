@@ -2,7 +2,7 @@
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
 export const SAVE_QUESTION_ANSWER = 'SAVE_QUESTION_ANSWER'
-export const SAVE_QUESTION = 'SAVE_QUESTION'
+export const SAVE_QUESTION_TO_QUESTIONS = 'SAVE_QUESTION_TO_QUESTIONS'
 
 export function receiveQuestions(questions) {
     return {
@@ -19,9 +19,9 @@ export function saveAnswer({ authedUser, qid, answer }) {
         answer
     }
 }
-export function saveQuestion(question) {
+export function saveQuestionToQuestions(question) {
     return {
-        type: SAVE_QUESTION,
+        type: SAVE_QUESTION_TO_QUESTIONS,
         question
     }
 }

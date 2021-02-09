@@ -1,8 +1,19 @@
 import { getInitialData } from '../utils/api'
-import { receiveQuestions, saveAnswer } from './questions'
-import { receiveUsers, saveUserAnwers } from './users'
+import { 
+    receiveQuestions, 
+    saveAnswer, 
+    saveQuestionToQuestions 
+} from './questions'
+import { 
+    receiveUsers, 
+    saveUserAnwers, 
+    saveQuestionToUsers 
+} from './users'
 import { setAuthedUser } from './authedUser'
-import { saveQuestionAnswer } from '../utils/api'
+import { 
+    saveQuestionAnswer,
+    saveQuestion
+} from '../utils/api'
 
 
 
@@ -29,4 +40,11 @@ export function handleSaveAnswer(info) {
         return saveQuestionAnswer(info)
     }
 
+}
+export function handleSaveQuestion(question) {
+    return (dispatch) => {
+        dispatch(saveQuestionToQuestions(question))
+        dispatch(saveQuestionToUsers(question))
+        return saveQuestion(question)
+    }
 }
