@@ -10,8 +10,7 @@ class LogInPage extends React.Component {
     }
     render() {
         const {users} = this.props;
-        console.log(users)
-        console.log(Object.keys(users))
+        
         return (
             <div>
                 <div>
@@ -43,7 +42,7 @@ class LogInPage extends React.Component {
                             ))}
                         </DropdownButton>
                        
-                        <button>Sign In</button>
+                        <button disabled = {this.state.authedUser === null}>Sign In</button>
                     </form>
                 </div>
 
