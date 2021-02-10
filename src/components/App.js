@@ -8,6 +8,7 @@ import Leaderboard from './Leaderboard';
 import NewQuestion from './NewQuestion';
 import Nav from './Nav';
 import LogInfo from './LogInfo';
+import LogInPage from './LonInPage';
 
 
 class App extends React.Component {
@@ -19,8 +20,8 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
           {
-            this.props.loading === true 
-              ? null 
+            this.props.login === true 
+              ? <LogInPage/>
               : (<div>
                   <Nav/>
                   <LogInfo/>
@@ -43,7 +44,7 @@ class App extends React.Component {
 }
 function mapStateToProps({ authedUser }) {
   return {
-    loading: authedUser === null 
+    login: authedUser === null 
   }
 }
 
