@@ -5,6 +5,8 @@ import players from '../utils/avatars/players.png'
 class LogInPage extends React.Component {
     render() {
         const {users} = this.props;
+        console.log(users)
+        console.log(Object.keys(users))
         return (
             <div>
                 <div>
@@ -22,11 +24,12 @@ class LogInPage extends React.Component {
                         <select>
                             {Object.keys(users).map(user => (
                                 <option key = {user}>
-                                    <img 
+                                    <div><img 
                                         src = {users[user].avatar.avatarURL}
                                         alt = {`Avatar of ${users[user].name}`}
                                     />
-                                    <p>{users[user].name}</p>
+                                    <p>{users[user].name}</p></div>
+                                    
                                 </option>
                             ))}
                         </select>

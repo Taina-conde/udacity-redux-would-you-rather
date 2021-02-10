@@ -18,7 +18,7 @@ import {
 
 
 // TODO: authentication process
-const AUTHED_ID = 'sarahedo' // Coming from sign in 
+const AUTHED_ID = null //'sarahedo' // Coming from sign in 
 
 
 export function handleInitialData() {
