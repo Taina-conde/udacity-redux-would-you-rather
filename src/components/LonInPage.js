@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import players from '../utils/avatars/players.png'
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 class LogInPage extends React.Component {
     render() {
@@ -21,18 +23,23 @@ class LogInPage extends React.Component {
                 <div>
                     <form>
                         <label>Sign in</label>
-                        <select>
-                            {Object.keys(users).map(user => (
-                                <option key = {user}>
-                                    <div><img 
+                        <DropdownButton id="dropdown-basic-button" title="Select user ...">
+                            {Object.keys(users).map( user => (
+                                <Dropdown.Item 
+                                    as="button" 
+                                    key = {users[user].id}
+                                    
+                                >
+                                    <img 
                                         src = {users[user].avatar.avatarURL}
                                         alt = {`Avatar of ${users[user].name}`}
+                                        style = {{height: '20px'}}
                                     />
-                                    <p>{users[user].name}</p></div>
-                                    
-                                </option>
+                                    <p>{users[user].name}</p>
+                                </Dropdown.Item>
                             ))}
-                        </select>
+                        </DropdownButton>
+                       
                         <button>Sign In</button>
                     </form>
                 </div>
