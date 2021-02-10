@@ -6,7 +6,13 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 class LogInPage extends React.Component {
     state = {
-        authedUser : null
+        value : ""
+    }
+    handleSelect = (event) => {
+        console.log(event)
+        this.setState({
+            value: event
+        })
     }
     render() {
         const {users} = this.props;
@@ -25,11 +31,17 @@ class LogInPage extends React.Component {
                 <div>
                     <form>
                         <label>Sign in</label>
-                        <DropdownButton id="dropdown-basic-button" title="Select user ...">
+                        <DropdownButton 
+                            id="dropdown-basic-button" 
+                            title={this.state.value === "" ? "Select user ..." : this.state.value}
+                            onSelect = {(e) => this.handleSelect(e)}
+                        >
                             {Object.keys(users).map( user => (
                                 <Dropdown.Item 
-                                    as="button" 
+                                    
                                     key = {users[user].id}
+                                    eventKey= {users[user].id}
+                                    
 
                                 >
                                     <img 
@@ -42,7 +54,7 @@ class LogInPage extends React.Component {
                             ))}
                         </DropdownButton>
                        
-                        <button disabled = {this.state.authedUser === null}>Sign In</button>
+                        <button disabled = {this.state.value === ""}>Sign In</button>
                     </form>
                 </div>
 
