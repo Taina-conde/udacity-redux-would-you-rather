@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { setAuthedUser } from '../actions/authedUser'
 
 class LogInfo extends React.Component {
     handleClick = (event) => {
         event.preventDefault();
-        
+        const { dispatch } = this.props;
+        dispatch(setAuthedUser(null));
     }
     render() {
         const { user } = this.props;
