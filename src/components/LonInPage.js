@@ -5,6 +5,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 class LogInPage extends React.Component {
+    state = {
+        authedUser : null
+    }
     render() {
         const {users} = this.props;
         console.log(users)
@@ -28,7 +31,7 @@ class LogInPage extends React.Component {
                                 <Dropdown.Item 
                                     as="button" 
                                     key = {users[user].id}
-                                    
+
                                 >
                                     <img 
                                         src = {users[user].avatar.avatarURL}
