@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import players from '../utils/avatars/players.png'
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import {setAuthedUser} from '../actions/authedUser'
 
 class LogInPage extends React.Component {
     state = {
@@ -13,6 +14,13 @@ class LogInPage extends React.Component {
         this.setState({
             value: event
         })
+    }
+    handleSubmit = e =>{
+        e.preventDefault();
+        const {dispatch} = this.props;
+        const id = this.state.value;
+        dispatch(setAuthedUser(id))
+
     }
     render() {
         const {users} = this.props;
@@ -29,11 +37,21 @@ class LogInPage extends React.Component {
                     />
                 </div>
                 <div>
-                    <form>
+                    <form onSubmit = {this.handleSubmit}>
                         <label>Sign in</label>
                         <DropdownButton 
                             id="dropdown-basic-button" 
-                            title={this.state.value === "" ? "Select user ..." : this.state.value}
+                            title={this.state.value === "" 
+                                ? "Select user ..." 
+                                : 
+                                <div>
+                                    <img 
+                                        src ={users[this.state.value].avatar.avatarURL} 
+                                        alt = {`Avatar of ${this.state.value}`}
+                                        style = {{height:'20px'}}
+                                        /> 
+                                    <p>{this.state.value}</p>
+                                </div>}
                             onSelect = {(e) => this.handleSelect(e)}
                         >
                             {Object.keys(users).map( user => (
@@ -54,7 +72,7 @@ class LogInPage extends React.Component {
                             ))}
                         </DropdownButton>
                        
-                        <button disabled = {this.state.value === ""}>Sign In</button>
+                        <button type = 'submit' disabled = {this.state.value === ""}>Sign In</button>
                     </form>
                 </div>
 
