@@ -17,14 +17,13 @@ class App extends React.Component {
   }
   render() {
     return (
-      <Router>
-        <React.Fragment>
+      <Router>   
           {
             this.props.login === true 
-              ? <LogInPage/>
+              ? <Route path = '/' component = {LogInPage}/>
               : (<div>
-                  <Nav/>
-                  <LogInfo/>
+                  <Route path = '/' component = {Nav}/>
+                  <Route path = '/' component = {LogInfo}/>
                   <Route path = '/' exact component = {Dashboard}/>
                   <Route path = '/questions/:questionId' component = {QuestionPage}/>
                   <Route path = '/leaderboard' component = {Leaderboard}/>
@@ -34,8 +33,6 @@ class App extends React.Component {
               </div>)
             
           }
-
-        </React.Fragment> 
       </Router>
      
     )
