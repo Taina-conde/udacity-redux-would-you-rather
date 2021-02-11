@@ -10,6 +10,9 @@ class LogInfo extends React.Component {
     }
     render() {
         const { user } = this.props;
+        if (user === undefined) {
+            return null
+        }
         return (
             <div>
                 <p>Hello, {user.name} </p>
