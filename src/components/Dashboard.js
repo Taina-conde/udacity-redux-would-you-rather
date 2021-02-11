@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Question from './Question';
 
+
 class Dashboard extends React.Component {
     state = {
         questionsShown: "unanswered"
@@ -38,21 +39,30 @@ class Dashboard extends React.Component {
         
         
         return (
-            <div>
-                <ul>
-                    <li 
-                        className= {questionsShown === "unanswered" ? "active" : ""}
+            <div className = 'container m-auto'> 
+                <ul className = 'nav nav-tabs'>
+                    <li
+                        className = 'nav-item'
                         onClick = {this.handleClickUnanswered}
-                        
                     >
-                        Unanswered
+                        <div 
+                            className= {questionsShown === "unanswered" ? "active nav-link" : "nav-link"}  
+                        >
+                            Unanswered
+                        </div>
                     </li>
-                    <li 
-                        className= {questionsShown === "answered" ? "active" : ""}
-                        onClick = {this.handleClickAnswered}
+                    
                         
-                    >
-                        Answered
+                   <li
+                    className = 'nav-item'
+                    onClick = {this.handleClickAnswered}
+                   >
+                        <div 
+                            className= {questionsShown === "answered" ? "active nav-link" : "nav-link"}
+                            
+                        >
+                            Answered
+                        </div>
                     </li>
                 </ul>
                 <div>
