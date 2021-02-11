@@ -14,18 +14,27 @@ class LogInfo extends React.Component {
             return null
         }
         return (
-            <div>
-                <p>Hello, {user.name} </p>
-                <img
-                    src= {user.avatar.avatarURL}
-                    alt = {`Avatar of ${user.id}`}
-                    style = {{height: "30px"}}
-                />
-                <button
-                    onClick = {this.handleClick}
-                >
-                    Log out
-                </button> 
+            <div className = 'navbar-text container'>
+                <div className = 'row'>
+                    <div className = 'col'>
+                        <p>Hello, {user.name} </p>
+                    </div>
+                    <div className = 'col'>
+                        <img
+                            src= {user.avatar.avatarURL}
+                            alt = {`Avatar of ${user.id}`}
+                            className = 'img-fluid login-img'
+                        />
+                    </div>
+                    
+                    <div className = 'col'>
+                        <button
+                            onClick = {this.handleClick}
+                        >
+                            Log out
+                        </button>
+                    </div> 
+                </div>
 
             </div>
 
