@@ -22,8 +22,14 @@ class App extends React.Component {
       <Router> 
         <React.Fragment>  
           <div className = 'container'>
-            <Nav/>
-            <LogInfo/>
+            <nav className = 'navbar navbar-expand-lg'>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <Nav/>
+              <LogInfo/>
+            </nav>
+            
             {this.props.login === true 
               ? <LogInPage/>
               : <Switch>
