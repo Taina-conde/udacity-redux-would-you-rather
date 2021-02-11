@@ -22,7 +22,7 @@ class App extends React.Component {
       <Router> 
         <React.Fragment>  
           <div className = 'container'>
-            <nav className = 'navbar navbar-expand-lg'>
+            <nav className = 'navbar navbar-expand-md navbar-light'>
               <button 
                 className="navbar-toggler" 
                 type="button" 
