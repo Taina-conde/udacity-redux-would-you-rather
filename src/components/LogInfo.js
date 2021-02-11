@@ -22,10 +22,11 @@ class LogInfo extends React.Component {
                 <img
                     src= {user.avatar.avatarURL}
                     alt = {`Avatar of ${user.id}`}
-                    className = 'img-fluid login-img rounded-circle'
+                    className = 'img-fluid login-img rounded-circle mr-4 ml-2'
                 />
                 <button
                     onClick = {this.handleClick}
+                    className = "btn btn-outline-danger btn-sm"
                 >
                     Log out
                 </button>
