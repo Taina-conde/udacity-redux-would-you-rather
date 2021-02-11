@@ -21,7 +21,7 @@ class App extends React.Component {
     return (
       <Router> 
         <React.Fragment>  
-          <div>
+          <div className = 'container'>
             <Nav/>
             <LogInfo/>
             {this.props.login === true 
@@ -33,7 +33,8 @@ class App extends React.Component {
                   <Route path = '/add' exact component = {NewQuestion}/>
                   <Route path = '/' component = {NotFound}/>
                 </Switch>
-            }   
+            } 
+              
           </div>
         </React.Fragment>
       </Router>
