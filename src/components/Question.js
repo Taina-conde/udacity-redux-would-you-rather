@@ -12,10 +12,11 @@ class Question extends React.Component {
         
         return (        
             <div className = 'container m-auto'>  
-                <div>
-                    <h4>{`${question.author} asks:`}</h4>
+                <div className = 'row'>
+                    <span className = 'capitalize'>{question.author}</span>
+                    <span> &nbsp; asks:</span> 
                 </div>
-                <div>
+                <div className = 'row'>
                     <div className = "user-avatar">
                         <img 
                             src = {users[question.author].avatar.avatarURL} 

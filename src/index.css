@@ -17,5 +17,8 @@ code {
 .list-group-item {
   border-top: none;
 }
+span.capitalize {
+  text-transform: capitalize;
+}
 
 
