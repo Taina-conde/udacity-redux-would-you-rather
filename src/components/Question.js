@@ -6,18 +6,12 @@ import QuestionContent from './QuestionContent';
 
 class Question extends React.Component {
     render(){
-        const {authedUser, users, question, id, parent} = this.props;
+        const { users, question, id, parent} = this.props;
         console.log(question)
         console.log('id: ', id)
         
-        return (
-
-            
-            <div>
-            {/**TODO: replace the outer div with <Link to = {`/questions/${id}`}.
-            I cant do it now because of error in dependency when installing 
-            react-router-dom
-            */}
+        return (        
+            <div className = 'container m-auto'>  
                 <div>
                     <h4>{`${question.author} asks:`}</h4>
                 </div>
@@ -62,9 +56,8 @@ class Question extends React.Component {
     }
 }
 
-function mapStateToProps({questions, authedUser, users}, {id}) {
+function mapStateToProps({questions, users}, {id}) {
     return {
-        authedUser,
         users,
         question: questions[id]
     }
