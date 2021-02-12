@@ -14,5 +14,8 @@ code {
 .login-img {
   height: 30px;
 }
+.list-group-item {
+  border-top: none;
+}
 
 

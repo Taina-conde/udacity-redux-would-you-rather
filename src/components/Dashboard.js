@@ -68,9 +68,9 @@ class Dashboard extends React.Component {
                 <div>
                     
                     {questionsShown === "unanswered" && (
-                        <ul>
+                        <ul className = 'list-group'>
                             {unansweredQuestionsIds.map(questionId => (
-                                <li key = {questionId}>
+                                <li key = {questionId} className = 'list-group-item'>
                                     {console.log("unanswered id: ",questionId)}
                                     <Question 
                                         id = {questionId}
@@ -84,9 +84,9 @@ class Dashboard extends React.Component {
                     }
                     {questionsShown === "answered" && 
                     (
-                        <ul>
+                        <ul className = 'list-group'>
                             {answeredQuestionsIds.map(questionId => (
-                                <li key = {questionId}>
+                                <li key = {questionId} className = 'list-group-item'>
                                     {console.log("answerd Id: ", questionId)}
                                     <Question 
                                         id = {questionId}
