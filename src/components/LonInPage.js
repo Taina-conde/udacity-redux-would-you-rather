@@ -36,11 +36,12 @@ class LogInPage extends React.Component {
         }
         return (
             <div className = 'container border rounded'>
-                <div className = 'row'>
-                    <p>Let's play Would You Rather? Before we begin, sign in to continue.</p>
+                <div className = 'row p-3 bg-light border-bottom mb-3'>
+                    <div>Let's play Would You Rather? Before we begin, sign in to continue.</div>
                 </div>
                 <div className = 'row'>
                     <img
+                        className = 'img-fluid'
                         src = {players}
                         alt = 'players'
                     />
