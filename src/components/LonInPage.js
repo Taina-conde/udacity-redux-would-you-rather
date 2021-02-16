@@ -48,20 +48,20 @@ class LogInPage extends React.Component {
                 <div className = 'row border border-success m-4'>
                     <form  className = 'login-form border border-primary' onSubmit = {this.handleSubmit}>
                         <div className = 'form-group d-flex flex-column border '>
-                            <label className = 'border'>Sign in</label>
-                            <InputGroup className = 'border border-primary justify-content-center'>
+                            <label>Sign in</label>
+                            <InputGroup className = 'justify-content-center' size = 'lg'>
                             
                                 <InputGroup.Prepend >
                                     <InputGroup.Text  >
                                         {this.state.value === "" 
                                             ? "Select user ..." 
                                             : 
-                                            <div className = 'd-flex flex-row align-items-center p-2'>
+                                            <div className = 'd-flex flex-row align-items-center'>
                                                 <img 
                                                     src ={users[this.state.value].avatar.avatarURL} 
                                                     alt = {`Avatar of ${this.state.value}`}
                                                     
-                                                    className = 'img-fluid login-img mr-2'
+                                                    className = 'login-img mr-2'
                                                     /> 
                                                 <div>{this.state.value}</div>
                                             </div>
@@ -75,12 +75,11 @@ class LogInPage extends React.Component {
                                     id="dropdown-basic-button" 
                                     title = ""
                                     variant = 'outline-secondary'
-                                    style = {{width: '9%'}}
                                     onSelect = {(e) => this.handleSelect(e)}
                                 >
                                     {Object.keys(users).map( user => (
                                         <Dropdown.Item 
-                                            className = 'd-flex flex-row align-items-center p-2'
+                                            className = 'd-flex flex-row align-items-center'
                                             key = {users[user].id}
                                             eventKey= {users[user].id}
                                             
@@ -90,7 +89,7 @@ class LogInPage extends React.Component {
                                                 src = {users[user].avatar.avatarURL}
                                                 alt = {`Avatar of ${users[user].name}`}
                                                
-                                                className = 'img-fluid login-img mr-2'
+                                                className = 'login-img mr-2'
                                             />
                                             <div>{users[user].name}</div>
                                         </Dropdown.Item>
@@ -103,7 +102,7 @@ class LogInPage extends React.Component {
                            
                         
                             <button 
-                                className = 'btn btn-primary mt-3'
+                                className = 'btn btn-lg btn-primary mt-3'
                                 type = 'submit' 
                                 disabled = {this.state.value === ""}
                             >
