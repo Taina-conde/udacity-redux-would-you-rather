@@ -20,5 +20,10 @@ code {
 span.capitalize {
   text-transform: capitalize;
 }
+.login-form, .login-dropdown {
+  width: 100%;
+  text-align: center;
+}
+
 
 

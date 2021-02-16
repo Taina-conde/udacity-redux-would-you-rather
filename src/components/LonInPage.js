@@ -44,15 +44,16 @@ class LogInPage extends React.Component {
                         alt = 'players'
                     />
                 </div>
-                <div className = 'row'>
-                    <form onSubmit = {this.handleSubmit}>
-                        <div className = 'form-group'>
-                            <label>Sign in</label>
+                <div className = 'row border border-success m-4'>
+                    <form  className = 'login-form border border-primary' onSubmit = {this.handleSubmit}>
+                        <div className = 'form-group d-flex flex-column border '>
+                            <label className = 'border'>Sign in</label>
                             
     
                             <DropdownButton 
                                 id="dropdown-basic-button" 
-                                className = 'bg-light'
+                                className = 'login-dropdown border border-danger'
+                                variant = 'light'
                                 title={this.state.value === "" 
                                     ? "Select user ..." 
                                     : 
