@@ -45,9 +45,9 @@ class LogInPage extends React.Component {
                         alt = 'players'
                     />
                 </div>
-                <div className = 'row border border-success m-4'>
-                    <form  className = 'login-form border border-primary' onSubmit = {this.handleSubmit}>
-                        <div className = 'form-group d-flex flex-column border '>
+                <div className = 'row m-4'>
+                    <form  className = 'login-form' onSubmit = {this.handleSubmit}>
+                        <div className = 'form-group d-flex flex-column'>
                             <label>Sign in</label>
                             <InputGroup className = 'justify-content-center' size = 'lg'>
                             
