@@ -34,53 +34,60 @@ class LogInPage extends React.Component {
             return <Redirect to = '/'/>
         }
         return (
-            <div>
-                <div>
+            <div className = 'container border rounded'>
+                <div className = 'row'>
                     <p>Let's play Would You Rather? Before we begin, sign in to continue.</p>
                 </div>
-                <div>
+                <div className = 'row'>
                     <img
                         src = {players}
                         alt = 'players'
                     />
                 </div>
-                <div>
+                <div className = 'row'>
                     <form onSubmit = {this.handleSubmit}>
-                        <label>Sign in</label>
-                        <DropdownButton 
-                            id="dropdown-basic-button" 
-                            title={this.state.value === "" 
-                                ? "Select user ..." 
-                                : 
-                                <div>
-                                    <img 
-                                        src ={users[this.state.value].avatar.avatarURL} 
-                                        alt = {`Avatar of ${this.state.value}`}
-                                        style = {{height:'20px'}}
-                                        /> 
-                                    <p>{this.state.value}</p>
-                                </div>}
-                            onSelect = {(e) => this.handleSelect(e)}
-                        >
-                            {Object.keys(users).map( user => (
-                                <Dropdown.Item 
-                                    
-                                    key = {users[user].id}
-                                    eventKey= {users[user].id}
-                                    
+                        <div className = 'form-group'>
+                            <label>Sign in</label>
+                            
+    
+                            <DropdownButton 
+                                id="dropdown-basic-button" 
+                                className = 'bg-light'
+                                title={this.state.value === "" 
+                                    ? "Select user ..." 
+                                    : 
+                                    <div className = 'd-flex flex-row align-items-center p-2'>
+                                        <img 
+                                            src ={users[this.state.value].avatar.avatarURL} 
+                                            alt = {`Avatar of ${this.state.value}`}
+                                            style = {{height:'20px'}}
+                                            className = 'img-fluid login-img mr-2'
+                                            /> 
+                                        <div>{this.state.value}</div>
+                                    </div>}
+                                onSelect = {(e) => this.handleSelect(e)}
+                            >
+                                {Object.keys(users).map( user => (
+                                    <Dropdown.Item 
+                                        className = 'd-flex flex-row align-items-center p-2'
+                                        key = {users[user].id}
+                                        eventKey= {users[user].id}
+                                        
 
-                                >
-                                    <img 
-                                        src = {users[user].avatar.avatarURL}
-                                        alt = {`Avatar of ${users[user].name}`}
-                                        style = {{height: '20px'}}
-                                    />
-                                    <p>{users[user].name}</p>
-                                </Dropdown.Item>
-                            ))}
-                        </DropdownButton>
-                       
-                        <button type = 'submit' disabled = {this.state.value === ""}>Sign In</button>
+                                    >
+                                        <img 
+                                            src = {users[user].avatar.avatarURL}
+                                            alt = {`Avatar of ${users[user].name}`}
+                                            style = {{height: '20px'}}
+                                            className = 'img-fluid login-img mr-2'
+                                        />
+                                        <div>{users[user].name}</div>
+                                    </Dropdown.Item>
+                                ))}
+                            </DropdownButton> 
+                        
+                            <button type = 'submit' disabled = {this.state.value === ""}>Sign In</button>
+                        </div>
                     </form>
                 </div>
 

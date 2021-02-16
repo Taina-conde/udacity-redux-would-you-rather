@@ -12,19 +12,19 @@ class Question extends React.Component {
         
         return (        
             <div className = 'container m-auto'>  
-                <div className = 'row'>
+                <div className = 'row border'>
                     <span className = 'capitalize'>{question.author}</span>
-                    <span> &nbsp; asks:</span> 
+                    &nbsp; asks:
                 </div>
                 <div className = 'row'>
-                    <div className = "user-avatar">
+                    <div className = "user-avatar col-4 p-4 bg-light">
                         <img 
                             src = {users[question.author].avatar.avatarURL} 
                             alt = {`avatar-${question.author}`}
-                            style = {{height: "100px"}}/> {/**TODO: add styles with className */}
+                            className = 'img-fluid'
+                        />
                     </div>
-                    <div className = "question-content">
-                        
+                    <div className = "question-content col-8 p-4">    
                         <div>
                             { parent === 'dashboard'
                                 && (
@@ -34,15 +34,9 @@ class Question extends React.Component {
                                             {question.optionOne.text} or {question.optionTwo.text}
                                         </div>
                                         
-                                        <Link to = {`/questions/${id}`}>View poll</Link>
-                                        {/** TODO: erase the following QuestionContent component. 
-                                         * This component is here just for debug purposes. 
-                                         */}
+                                        <Link to = {`/questions/${id}`}>View poll</Link>                                     
                                         
-                                        
-                                    </div>
-                                    
-
+                                    </div>      
                                 )
                             }
                             { parent === "questionPage"
