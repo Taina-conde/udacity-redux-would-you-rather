@@ -42,11 +42,10 @@ class LogInPage extends React.Component {
                 </div>
                 <div className = 'card-body' >
 
-                <div className = 'card-content p-5'>
+                <div className = 'card-content'>
                     <div className = 'text-center'>
                         <img
-                            className = 'img-fluid'
-                            style = {{width: '50%'}}
+                            className = 'img-fluid img-players'
                             src = {players}
                             alt = 'players'
                         />

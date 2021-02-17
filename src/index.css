@@ -25,15 +25,18 @@ span.capitalize {
   text-align: center;
 }
 .card-content {
-  width: 70%;
   margin: auto;
+  border: 1px solid red
 }
 h3.card-title {
   color: #00BFA5;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 0.8em;
 
+}
+.img-players {
+  width: 50%;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -45,6 +48,10 @@ h3.card-title {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .card-content {
+    width: 70%;
+    border: 1px solid blue
+  }
   .central {
     width: 80%;
   }
