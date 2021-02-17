@@ -54,7 +54,7 @@ class LogInPage extends React.Component {
                     <div className = 'm-2'>
                         <form  className = 'login-form' onSubmit = {this.handleSubmit}>
                             <div className = 'form-group d-flex flex-column'>
-                                <h3 className = 'card-title p-3'>Sign in</h3>
+                                <h3 className = 'card-title p-4'>Sign in</h3>
                                 <InputGroup className = 'justify-content-center' size = 'lg'>
                                 
                                     <InputGroup.Prepend >
