@@ -36,7 +36,12 @@ class Question extends React.Component {
                                             {optionOne.charAt(0).toUpperCase() + optionOne.slice(1)} or {optionTwo}
                                         </div>
                                         
-                                        <Link to = {`/questions/${id}`}>View poll</Link>                                     
+                                        <Link 
+                                            to = {`/questions/${id}`}
+                                            className = 'btn btn-sm btn-outline-secondary mt-2'
+                                        >
+                                            View poll
+                                        </Link>                                     
                                         
                                     </div>      
                                 )
