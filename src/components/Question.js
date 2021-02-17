@@ -18,15 +18,15 @@ class Question extends React.Component {
                     <span className = 'capitalize'>{question.author + " "}</span>
                     <span>asks:</span>
                 </div>
-                <div className = 'card-body d-flex'>
-                    <div className = "user-avatar col-4 pt-3 rounded align-self-center">
+                <div className = 'card-body d-sm-flex'>
+                    <div className = "user-avatar col-sm-4 pt-3 rounded align-self-center">
                         <img 
                             src = {users[question.author].avatar.avatarURL} 
                             alt = {`avatar-${question.author}`}
                             className = 'img-fluid'
                         />
                     </div>
-                    <div className = "question-content col-8 p-4">    
+                    <div className = "question-content col-sm-8 p-4">    
                         <div>
                             { parent === 'dashboard'
                                 && (
