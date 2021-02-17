@@ -26,7 +26,7 @@ span.capitalize {
 }
 .card-content {
   margin: auto;
-  border: 1px solid red
+  border: 1px solid red;
 }
 h3.card-title {
   color: #00BFA5;
@@ -45,7 +45,7 @@ h3.card-title {
 @media only screen and (min-width: 600px) {
   .card-content {
     width: 70%;
-    border: 1px solid blue
+    border: 1px solid blue;
   }
   .central {
     width: 80%;
@@ -67,7 +67,12 @@ h3.card-title {
   h3.card-title {
     font-size: 2.7em;
   }
+  .card-content {
+    width: 50%;
+    border: 1px solid green;
+  }
 }
+  
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
