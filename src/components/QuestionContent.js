@@ -55,30 +55,47 @@ class QuestionContent extends React.Component {
                 <h3>Whould you rather...</h3>
                 <div>
                     <form onSubmit = {this.handleSubmit}>
-                        <input 
-                            type="radio" 
-                            id="optionOne"
-                            name="option" 
-                            value="optionOne"
-                            onChange = {this.handleChange}
-                        />
-                        <label htmlFor="optionOne"> {question.optionOne.text}</label>
-                        <br/>
-                        <input 
-                            type="radio" 
-                            id="optionTwo" 
-                            name="option" 
-                            value="optionTwo"
-                            onChange = {this.handleChange}
-                        />
-                        <label htmlFor="optionTwo">{question.optionTwo.text}</label>
-                        <br/>
-                        <button 
-                            type = 'submit' 
-                            disabled = {this.state.answer === ""}
-                        >
-                                Submit
-                        </button>
+                        
+                            <div className = 'form-check'>
+                                <input 
+                                    className = 'form-check-input'
+                                    type="radio" 
+                                    id="optionOne"
+                                    name="option" 
+                                    value="optionOne"
+                                    onChange = {this.handleChange}
+                                />
+                                <label 
+                                    className = 'form-check-label'
+                                    htmlFor="optionOne"
+                                > 
+                                    {question.optionOne.text}
+                                </label>
+                            </div>
+                            <div className = 'form-check'>
+                                <input 
+                                    className = 'form-check-input'
+                                    type="radio" 
+                                    id="optionTwo" 
+                                    name="option" 
+                                    value="optionTwo"
+                                    onChange = {this.handleChange}
+                                />
+                                <label 
+                                    className = 'form-check-label'
+                                    htmlFor="optionTwo"
+                                >
+                                    {question.optionTwo.text}
+                                </label>
+                            </div>
+                            <button 
+                                className = 'btn btn-primary'
+                                type = 'submit' 
+                                disabled = {this.state.answer === ""}
+                            >
+                                    Submit
+                            </button>
+                        
                     </form>
                 </div>
             </div>
