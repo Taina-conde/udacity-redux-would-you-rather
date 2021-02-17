@@ -37,12 +37,12 @@ class LogInPage extends React.Component {
         return (
             <div className = 'card'>
                 <div className = 'card-header text-center'>
-                    <h3 className = 'card-title'>Would you rather?</h3>
+                    <h4 className = 'card-title'>Would you rather?</h4>
                     <div className = 'card-text'>Let's play Would You Rather? Before we begin, sign in to continue.</div>
                 </div>
                 <div className = 'card-body' >
 
-                <div className = 'border border-success card-content p-5'>
+                <div className = 'card-content p-5'>
                     <div className = 'text-center'>
                         <img
                             className = 'img-fluid'
@@ -54,7 +54,7 @@ class LogInPage extends React.Component {
                     <div className = 'm-2'>
                         <form  className = 'login-form' onSubmit = {this.handleSubmit}>
                             <div className = 'form-group d-flex flex-column'>
-                                <label>Sign in</label>
+                                <h3 className = 'card-title p-3'>Sign in</h3>
                                 <InputGroup className = 'justify-content-center' size = 'lg'>
                                 
                                     <InputGroup.Prepend >
