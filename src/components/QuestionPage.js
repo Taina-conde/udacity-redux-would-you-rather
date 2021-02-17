@@ -7,7 +7,7 @@ class QuestionPage extends React.Component {
     render() {
         const {questionId} = this.props.match.params;
         return (
-            <div>
+            <div className = 'central m-auto'>
                 
                 <Question id = {questionId} parent = 'questionPage'/>
             </div>
