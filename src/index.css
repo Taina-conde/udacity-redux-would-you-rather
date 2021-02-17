@@ -32,19 +32,14 @@ h3.card-title {
   color: #00BFA5;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: 1.7em;
 
 }
 .img-players {
   width: 50%;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .central {
-    width: 100%;
-  }
-}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -56,6 +51,9 @@ h3.card-title {
     width: 80%;
   }
 }
+  h3.card-title {
+  font-size: 2.3em;
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -66,7 +64,9 @@ h3.card-title {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+  h3.card-title {
+    font-size: 2.7em;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
