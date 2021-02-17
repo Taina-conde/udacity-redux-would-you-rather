@@ -26,7 +26,7 @@ span.capitalize {
 }
 .card-content {
   margin: auto;
-  border: 1px solid red;
+  
 }
 h3.card-title {
   color: #00BFA5;
@@ -38,14 +38,16 @@ h3.card-title {
 .img-players {
   width: 50%;
 }
-
+.user-avatar {
+  background-color: #00BFA5;
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .card-content {
     width: 70%;
-    border: 1px solid blue;
+    
   }
   .central {
     width: 80%;
@@ -69,7 +71,7 @@ h3.card-title {
   }
   .card-content {
     width: 50%;
-    border: 1px solid green;
+    
   }
 }
   

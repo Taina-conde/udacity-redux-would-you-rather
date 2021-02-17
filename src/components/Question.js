@@ -11,13 +11,13 @@ class Question extends React.Component {
         console.log('id: ', id)
         
         return (        
-            <div className = 'container m-auto'>  
-                <div className = 'row border'>
+            <div className = 'card m-auto'>  
+                <div className = 'card-header'>
                     <span className = 'capitalize'>{question.author}</span>
-                    &nbsp; asks:
+                    <span>asks:</span>
                 </div>
-                <div className = 'row'>
-                    <div className = "user-avatar col-4 p-4 bg-light">
+                <div className = 'card-body d-flex'>
+                    <div className = "user-avatar col-4 pt-3 rounded align-self-center">
                         <img 
                             src = {users[question.author].avatar.avatarURL} 
                             alt = {`avatar-${question.author}`}
