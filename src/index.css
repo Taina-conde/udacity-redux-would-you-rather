@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .central {
-  width: 97%;
+  width: auto;
 }
 .login-img {
   height: 30px;
@@ -43,6 +43,8 @@ h3.card-title {
 }
 .user-avatar {
   background-color: #00BFA5;
+  width: 60%;
+  margin: auto;
 }
 
 
@@ -65,6 +67,9 @@ h3.card-title {
 @media only screen and (min-width: 768px) {
   .central {
     width: 60%;
+  }
+  .user-avatar {
+    width: auto;
   }
 }
 
