@@ -24,7 +24,10 @@ span.capitalize {
   width: 100%;
   text-align: center;
 }
-
+.card-content {
+  width: 70%;
+  margin: auto;
+}
 
 
 
