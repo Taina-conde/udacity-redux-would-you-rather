@@ -39,7 +39,7 @@ class Dashboard extends React.Component {
         
         
         return (
-            <div className = 'container m-auto'> 
+            <div className = 'container m-auto central'> 
                 <ul className = 'nav nav-tabs'>
                     <li
                         className = 'nav-item'
