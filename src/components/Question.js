@@ -12,7 +12,7 @@ class Question extends React.Component {
         
         return (        
             <div className = 'card m-auto'>  
-                <div className = 'card-header'>
+                <div className = 'card-header font-weight-bold'>
                     <span className = 'capitalize'>{question.author + " "}</span>
                     <span>asks:</span>
                 </div>
