@@ -9,6 +9,8 @@ class Question extends React.Component {
         const { users, question, id, parent} = this.props;
         console.log(question)
         console.log('id: ', id)
+        const optionOne = question.optionOne.text;
+        const optionTwo = question.optionTwo.text;
         
         return (        
             <div className = 'card m-auto'>  
@@ -29,9 +31,9 @@ class Question extends React.Component {
                             { parent === 'dashboard'
                                 && (
                                     <div>
-                                        <span>Would you rather:</span>
+                                        <span className = "font-weight-bold">Would you rather:</span>
                                         <div className = "text-truncate">
-                                            {question.optionOne.text} or {question.optionTwo.text}
+                                            {optionOne.charAt(0).toUpperCase() + optionOne.slice(1)} or {optionTwo}
                                         </div>
                                         
                                         <Link to = {`/questions/${id}`}>View poll</Link>                                     
