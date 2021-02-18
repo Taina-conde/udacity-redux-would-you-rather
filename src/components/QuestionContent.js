@@ -48,10 +48,16 @@ class QuestionContent extends React.Component {
                                     : "option-not-voted mb-4"
                                 }
                         >
+                            <div 
+                                className = 'your-vote-symbol bg-warning rounded-circle'
+
+                            >
+                                Your vote
+                            </div>
                             <div>{`Would you rather ${question.optionOne.text}?`}</div>
                             <div className = 'progress'> 
                                 <div 
-                                    className = 'progress-bar progress-bar-striped bg-success'
+                                    className = 'progress-bar progress-bar-striped bg-info'
                                     role = 'progressbar'
                                     style = {{width: `${optionOnePercentage}%`}}
                                     aria-valuenow = {optionOnePercentage}
@@ -73,7 +79,7 @@ class QuestionContent extends React.Component {
                             <div>{`Would you rather ${question.optionTwo.text}?`}</div>
                             <div className = 'progress'> 
                                 <div 
-                                    className = 'progress-bar progress-bar-striped bg-success'
+                                    className = 'progress-bar progress-bar-striped bg-info'
                                     role = 'progressbar'
                                     style = {{width: `${optionTwoPercentage}%`}}
                                     aria-valuenow = {optionTwoPercentage}
