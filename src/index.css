@@ -52,15 +52,9 @@ h3.card-title {
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: 576px) {
-  .card-content {
-    width: 70%;
-    
-  }
-  .central {
-    width: 80%;
-  }
+  
   h3.card-title {
     font-size: 2.3em;
   }
@@ -70,7 +64,7 @@ h3.card-title {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .central {
-    width: 60%;
+    width: 80%;
   }
   .user-avatar {
     width: auto;
@@ -82,10 +76,10 @@ h3.card-title {
   h3.card-title {
     font-size: 2.7em;
   }
-  .card-content {
-    width: 50%;
-    
+  .central {
+    width: 60%;
   }
+  
 }
   
 
