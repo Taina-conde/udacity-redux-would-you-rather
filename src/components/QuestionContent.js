@@ -50,12 +50,17 @@ class QuestionContent extends React.Component {
                         >
                             <div 
                                 className = 'your-vote-symbol bg-warning rounded-circle'
+                                style = {{display: 
+                                    question.optionOne.votes.includes(user.id)
+                                        ? "inline-block"
+                                        : "none" 
+                                }}
 
                             >
                                 Your vote
                             </div>
-                            <div>{`Would you rather ${question.optionOne.text}?`}</div>
-                            <div className = 'progress'> 
+                            <div >{`Would you rather ${question.optionOne.text}?`}</div>
+                            <div className = 'progress' > 
                                 <div 
                                     className = 'progress-bar progress-bar-striped bg-info'
                                     role = 'progressbar'
@@ -76,6 +81,17 @@ class QuestionContent extends React.Component {
                                     : "option-not-voted"
                                 }
                         >
+                            <div 
+                                className = 'your-vote-symbol bg-warning rounded-circle'
+                                style = {{display: 
+                                    question.optionTwo.votes.includes(user.id)
+                                        ? "inline-block"
+                                        : "none" 
+                                }}
+
+                            >
+                                Your vote
+                            </div>
                             <div>{`Would you rather ${question.optionTwo.text}?`}</div>
                             <div className = 'progress'> 
                                 <div 
