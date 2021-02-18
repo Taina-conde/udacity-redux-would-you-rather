@@ -72,7 +72,7 @@ class QuestionContent extends React.Component {
                                         {`${optionOnePercentage}%`}
                                 </div>
                             </div>
-                            <div className = 'text-center'>{ `${numOptionOneVotes} out of ${totalVotes} votes`} </div>
+                            <div className = 'text-center font-weight-bold'>{ `${numOptionOneVotes} out of ${totalVotes} votes`} </div>
                         </div>
                         <div
                             className = {
@@ -105,7 +105,7 @@ class QuestionContent extends React.Component {
                                         {`${optionTwoPercentage}%`}
                                 </div>
                             </div>
-                            <div className= 'text-center'>{ `${numOptionTwoVotes} out of ${totalVotes} votes`} </div>
+                            <div className= 'text-center font-weight-bold'>{ `${numOptionTwoVotes} out of ${totalVotes} votes`} </div>
                         </div>
                     </div>
                 </div>
