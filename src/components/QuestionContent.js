@@ -27,6 +27,8 @@ class QuestionContent extends React.Component {
     render() {
         const { question, user } = this.props;
         const userAnswered = Object.keys(user.answers).includes(question.id);
+        console.log(question)
+        console.log(user)
         if (userAnswered === true) {
             const numOptionOneVotes = question.optionOne.votes.length;
             const numOptionTwoVotes = question.optionTwo.votes.length; 
@@ -39,7 +41,13 @@ class QuestionContent extends React.Component {
                         <h3>Results:</h3>
                     </div>
                     <div>
-                        <div>
+                        <div 
+                            className = {
+                                question.optionOne.votes.includes(user.id)
+                                    ? "option-voted"
+                                    : "option-not-voted"
+                                }
+                        >
                             <div>{`Would you rather ${question.optionOne.text}?`}</div>
                             <div className = 'progress'> 
                                 <div 
@@ -53,9 +61,15 @@ class QuestionContent extends React.Component {
                                         {`${optionOnePercentage}%`}
                                 </div>
                             </div>
-                            <div>{ `${numOptionOneVotes} out of ${totalVotes} votes`} </div>
+                            <div className = 'text-center'>{ `${numOptionOneVotes} out of ${totalVotes} votes`} </div>
                         </div>
-                        <div>
+                        <div
+                            className = {
+                                question.optionOne.votes.includes(user.id)
+                                    ? "option-voted"
+                                    : "option-not-voted"
+                                }
+                        >
                             <div>{`Would you rather ${question.optionTwo.text}?`}</div>
                             <div className = 'progress'> 
                                 <div 
@@ -69,7 +83,7 @@ class QuestionContent extends React.Component {
                                         {`${optionTwoPercentage}%`}
                                 </div>
                             </div>
-                            <div>{ `${numOptionTwoVotes} out of ${totalVotes} votes`} </div>
+                            <div className= 'text-center'>{ `${numOptionTwoVotes} out of ${totalVotes} votes`} </div>
                         </div>
                     </div>
                 </div>
