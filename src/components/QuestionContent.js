@@ -44,8 +44,8 @@ class QuestionContent extends React.Component {
                         <div 
                             className = {
                                 question.optionOne.votes.includes(user.id)
-                                    ? "option-voted"
-                                    : "option-not-voted"
+                                    ? "option-voted mb-4"
+                                    : "option-not-voted mb-4"
                                 }
                         >
                             <div>{`Would you rather ${question.optionOne.text}?`}</div>
@@ -65,7 +65,7 @@ class QuestionContent extends React.Component {
                         </div>
                         <div
                             className = {
-                                question.optionOne.votes.includes(user.id)
+                                question.optionTwo.votes.includes(user.id)
                                     ? "option-voted"
                                     : "option-not-voted"
                                 }
