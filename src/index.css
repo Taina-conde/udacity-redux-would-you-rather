@@ -46,6 +46,10 @@ h3.card-title {
   width: 60%;
   margin: auto;
 }
+.question-content {
+  margin: auto;
+  font-size: 1em;
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

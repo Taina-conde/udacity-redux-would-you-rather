@@ -33,8 +33,10 @@ class QuestionContent extends React.Component {
             const totalVotes = numOptionOneVotes + numOptionTwoVotes;
             
             return (
-                <div>
-                    <h3>Results:</h3>
+                <div className = 'd-flex flex-column'>
+                    <div>
+                        <h3>Results:</h3>
+                    </div>
                     <div>
                         <div>
                             <div>{`Would you rather ${question.optionOne.text}?`}</div>
