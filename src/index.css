@@ -50,7 +50,7 @@ h3.card-title {
   margin: auto;
   font-size: 1em;
 }
-.unanswered-content h3 {
+.unanswered-content, .answered-content h3 {
   text-align: center;
   font-size: 1.3em;
 }
@@ -62,7 +62,7 @@ h3.card-title {
   h3.card-title {
     font-size: 2.3em;
   }
-  .unanswered-content h3 {
+  .unanswered-content, .answered-content h3 {
     text-align: left;
     
   }

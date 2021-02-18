@@ -33,9 +33,9 @@ class QuestionContent extends React.Component {
             const totalVotes = numOptionOneVotes + numOptionTwoVotes;
             
             return (
-                <div className = 'd-flex flex-column'>
+                <div className = 'd-flex flex-column answered-content'>
                     <div>
-                        <h5>Results:</h5>
+                        <h3>Results:</h3>
                     </div>
                     <div>
                         <div>
