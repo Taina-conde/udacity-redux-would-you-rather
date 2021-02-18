@@ -56,17 +56,25 @@ h3.card-title {
 }
 
 .option-not-voted {
-  border: 1px solid rgb(206, 202, 202);
-  background-color: rgba(206, 202, 202, 0.2);
+  border: 1px solid rgb(220, 223, 222);
+  background-color: rgba(220, 223, 222, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(94, 91, 91, 0.5);
+  -moz-box-shadow: 2px 2px 2px 2px rgba(94, 91, 91, 0.5);
   box-shadow: 2px 2px 2px 2px rgba(94, 91, 91, 0.5);
   padding: 10px;
 
 }
 .option-voted {
-  border: 1px solid rgb(60, 179, 113);
-  background-color: rgb(60, 179, 113, 0.3);
+  border: 1px solid rgb(0, 191, 165);
+  background-color: rgba(0, 191, 165, 0.3);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-box-shadow: 2px 2px 2px 2px rgba(94, 91, 91, 0.5);
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(94, 91, 91, 0.5);
   box-shadow: 2px 2px 2px 2px rgba(94, 91, 91, 0.5);
   padding: 10px;
   
