@@ -35,7 +35,7 @@ class QuestionContent extends React.Component {
             return (
                 <div className = 'd-flex flex-column'>
                     <div>
-                        <h3>Results:</h3>
+                        <h5>Results:</h5>
                     </div>
                     <div>
                         <div>
