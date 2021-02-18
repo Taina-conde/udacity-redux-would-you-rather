@@ -43,7 +43,7 @@ class QuestionContent extends React.Component {
                             <div>{`Would you rather ${question.optionOne.text}?`}</div>
                             <div className = 'progress'> 
                                 <div 
-                                    className = 'progress-bar'
+                                    className = 'progress-bar progress-bar-striped bg-success'
                                     role = 'progressbar'
                                     style = {{width: `${optionOnePercentage}%`}}
                                     aria-valuenow = {optionOnePercentage}
@@ -59,7 +59,7 @@ class QuestionContent extends React.Component {
                             <div>{`Would you rather ${question.optionTwo.text}?`}</div>
                             <div className = 'progress'> 
                                 <div 
-                                    className = 'progress-bar'
+                                    className = 'progress-bar progress-bar-striped bg-success'
                                     role = 'progressbar'
                                     style = {{width: `${optionTwoPercentage}%`}}
                                     aria-valuenow = {optionTwoPercentage}
