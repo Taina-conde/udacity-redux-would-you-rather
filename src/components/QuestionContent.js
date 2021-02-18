@@ -31,7 +31,8 @@ class QuestionContent extends React.Component {
             const numOptionOneVotes = question.optionOne.votes.length;
             const numOptionTwoVotes = question.optionTwo.votes.length; 
             const totalVotes = numOptionOneVotes + numOptionTwoVotes;
-            
+            const optionOnePercentage = (numOptionOneVotes/totalVotes)*100;
+            const optionTwoPercentage = (numOptionTwoVotes/totalVotes)* 100;
             return (
                 <div className = 'd-flex flex-column answered-content'>
                     <div>
@@ -40,12 +41,34 @@ class QuestionContent extends React.Component {
                     <div>
                         <div>
                             <div>{`Would you rather ${question.optionOne.text}?`}</div>
-                            <div> {/** TODO: percentage bar of votes */}</div>
+                            <div className = 'progress'> 
+                                <div 
+                                    className = 'progress-bar'
+                                    role = 'progressbar'
+                                    style = {{width: `${optionOnePercentage}%`}}
+                                    aria-valuenow = {optionOnePercentage}
+                                    aria-valuemin = "0"
+                                    aria-valuemax = "100"
+                                    >
+                                        {`${optionOnePercentage}%`}
+                                </div>
+                            </div>
                             <div>{ `${numOptionOneVotes} out of ${totalVotes} votes`} </div>
                         </div>
                         <div>
                             <div>{`Would you rather ${question.optionTwo.text}?`}</div>
-                            <div> {/** TODO: percentage bar of votes */}</div>
+                            <div className = 'progress'> 
+                                <div 
+                                    className = 'progress-bar'
+                                    role = 'progressbar'
+                                    style = {{width: `${optionTwoPercentage}%`}}
+                                    aria-valuenow = {optionTwoPercentage}
+                                    aria-valuemin = "0"
+                                    aria-valuemax = "100"
+                                >
+                                        {`${optionTwoPercentage}%`}
+                                </div>
+                            </div>
                             <div>{ `${numOptionTwoVotes} out of ${totalVotes} votes`} </div>
                         </div>
                     </div>
