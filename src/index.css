@@ -115,6 +115,9 @@ h3.card-title {
 .card-header h1 {
   font-size: 1.8em;
 }
+.leaderboard-list {
+  list-style: none;
+}
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: 576px) {
