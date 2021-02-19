@@ -7,7 +7,6 @@ import QuestionPage from './QuestionPage';
 import Leaderboard from './Leaderboard';
 import NewQuestion from './NewQuestion';
 import Nav from './Nav';
-import LogInfo from './LogInfo';
 import LogInPage from './LonInPage';
 import NotFound from './NotFound';
 
@@ -22,22 +21,7 @@ class App extends React.Component {
       <Router> 
         <React.Fragment>  
           <div className = 'container'>
-            <nav className = 'navbar navbar-expand-md navbar-light'>
-              <button 
-                className="navbar-toggler" 
-                type="button" 
-                data-toggle="collapse" 
-                data-target="#navbarToggler" 
-                aria-controls="navbarToggler" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <Nav/>
-              <LogInfo/>
-            </nav>
-            
+            <Nav/>
             {this.props.login === true 
               ? <LogInPage/>
               : <Switch>
