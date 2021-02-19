@@ -40,7 +40,7 @@ class QuestionContent extends React.Component {
                     <div>
                         <h3>Results:</h3>
                     </div>
-                    <div>
+                    <div className = 'pt-2'>
                         <div 
                             className = {
                                 question.optionOne.votes.includes(user.id)
@@ -59,8 +59,8 @@ class QuestionContent extends React.Component {
                             >
                                 Your vote
                             </div>
-                            <div >{`Would you rather ${question.optionOne.text}?`}</div>
-                            <div className = 'progress' > 
+                            <div>{`Would you rather ${question.optionOne.text}?`}</div>
+                            <div className = 'progress mt-2 mb-2' > 
                                 <div 
                                     className = 'progress-bar progress-bar-striped bg-info'
                                     role = 'progressbar'
@@ -93,7 +93,7 @@ class QuestionContent extends React.Component {
                                 Your vote
                             </div>
                             <div>{`Would you rather ${question.optionTwo.text}?`}</div>
-                            <div className = 'progress'> 
+                            <div className = 'progress mt-2 mb-2'> 
                                 <div 
                                     className = 'progress-bar progress-bar-striped bg-info'
                                     role = 'progressbar'

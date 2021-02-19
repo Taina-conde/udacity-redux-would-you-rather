@@ -18,7 +18,7 @@ class Question extends React.Component {
                     <span className = 'capitalize'>{question.author + " "}</span>
                     <span>asks:</span>
                 </div>
-                <div className = 'card-body d-sm-flex'>
+                <div className = 'card-body d-sm-flex pr-3 pl-3 pt-0 pb-1'>
                     <div className = "user-avatar col-sm-4">
                         <div className = 'rounded-circle img-avatar'>
                            <img 
@@ -29,7 +29,7 @@ class Question extends React.Component {
                         </div>
                         
                     </div>
-                    <div className = "question-content col-sm-8 p-4">    
+                    <div className = "question-content col-sm-8 p-3 m-1">    
                         <div>
                             { parent === 'dashboard'
                                 && (
