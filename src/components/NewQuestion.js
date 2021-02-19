@@ -31,30 +31,37 @@ class NewQuestion extends React.Component {
             return <Redirect to= '/'/>
         }
         return ( 
-            <div>
-                <div>
+            <div className = 'card mt-4'>
+                <div className = 'card-header text-center'>
                     <h1>Create new question</h1>
                 </div>
-                <div>
+                <div className = 'card-body'>
                     <form onSubmit= {this.handleSubmit}>
                         <p> Complete the question:</p>
-                        <h2>Would you rather...</h2>
+                        <h4>Would you rather...</h4>
                         <input 
+                            className = 'form-control mt-4'
                             type= 'text' 
                             placeholder= 'Enter option one text here'
                             onChange = {this.handleChangeInputs}
                             name = 'optionOneText'
                         />
-                        <br/>
-                        <p>OR</p>
-                        <br/>
+                        
+                        <div className = 'font-weight-bold text-center d-flex mb-2 mt-2'>
+                            <div className = 'col-5'><hr/></div>
+                            <div className = 'col-2 p-0'>OR</div>
+                            <div className = 'col-5'><hr/></div>
+                        </div>
+                        
                         <input
+                            className = 'form-control'
                             type= 'text'
                             placeholder = 'Enter option two text here'
                             onChange = {this.handleChangeInputs}
                             name = 'optionTwoText'
                         />
                         <button 
+                            className = 'btn btn-success mt-4'
                             type = 'submit' 
                             disabled = {this.state.optionOneText && this.state.optionTwoText ? false : true }
                             
