@@ -114,7 +114,7 @@ class QuestionContent extends React.Component {
         return (
             <div className = 'unanswered-content'>
                 <h3>Whould you rather...</h3>
-                <div>
+                <div className = 'pt-3'>
                     <form onSubmit = {this.handleSubmit}>
                         
                             <div className = 'form-check'>
@@ -149,7 +149,7 @@ class QuestionContent extends React.Component {
                                     {question.optionTwo.text}
                                 </label>
                             </div>
-                            <div className = 'text-right'>
+                            <div className = 'text-right pt-3'>
                                 <button 
                                     className = 'btn btn-primary'
                                     type = 'submit' 
