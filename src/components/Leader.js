@@ -31,8 +31,13 @@ function Leader(props) {
                         </div>
                     </div>
                     
-                    <div className = 'col-sm-3 d-flex flex-sm-column border p-0 score-box'>
-                        <div className = 'col-6 bg-light text-center'>Score</div>
+                    <div className = 'col-sm-3 d-flex flex-sm-column border p-0 score-box rounded'>
+                        <div className = 'col-6 bg-light score-text d-flex align-items-center'>
+                            <div className = 'col'>
+                               Score 
+                            </div>
+                            
+                        </div>
                         <div className = 'col-6 text-white d-flex p-0'>
                             <div className = 'col p-3'> 
                                 <div 

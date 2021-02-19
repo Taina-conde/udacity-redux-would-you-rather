@@ -120,7 +120,9 @@ h3.card-title {
 }
 .score-box {
   margin-top: 20px;
-  
+  -moz-box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
+  box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
 }
 .score-number {
   width: 60px;
@@ -128,6 +130,14 @@ h3.card-title {
   margin: auto;
   font-size: 1.5em;
   font-weight: bold;
+}
+.score-text {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-right: 1px solid rgba(192, 191, 191, 0.7);
+
+ 
 }
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
