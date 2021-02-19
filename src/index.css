@@ -112,7 +112,9 @@ h3.card-title {
   left : 35px;
   
 }
-
+.card-header h1 {
+  font-size: 1.8em;
+}
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: 576px) {
@@ -140,6 +142,9 @@ h3.card-title {
 @media only screen and (min-width: 768px) {
   .central {
     width: 80%;
+  }
+  .card-header h1 {
+    font-size: 2.5em;
   }
   
 }
