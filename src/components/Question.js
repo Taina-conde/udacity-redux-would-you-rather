@@ -19,12 +19,15 @@ class Question extends React.Component {
                     <span>asks:</span>
                 </div>
                 <div className = 'card-body d-sm-flex'>
-                    <div className = "user-avatar col-sm-4 pt-3 rounded align-self-center">
-                        <img 
+                    <div className = "user-avatar col-sm-4">
+                        <div className = 'rounded-circle img-avatar'>
+                           <img 
                             src = {users[question.author].avatar.avatarURL} 
                             alt = {`avatar-${question.author}`}
-                            className = 'img-fluid'
-                        />
+                            className = 'img-fluid rounded-circle avatar'
+                            /> 
+                        </div>
+                        
                     </div>
                     <div className = "question-content col-sm-8 p-4">    
                         <div>
