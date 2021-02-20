@@ -19,7 +19,7 @@ function Leader(props) {
                     </div>
                     <div className= 'col-sm-6 d-flex flex-column justify-content-between'>
                         <div>
-                            <h1>{user.name}</h1>
+                            <h3>{user.name}</h3>
                         </div>
                         <div className = 'border-bottom d-flex justify-content-between'>
                             <div>Answered questions: </div>
@@ -32,13 +32,10 @@ function Leader(props) {
                     </div>
                     
                     <div className = 'col-sm-3 d-flex flex-sm-column border p-0 score-box rounded'>
-                        <div className = 'col-6 bg-light score-text d-flex align-items-center'>
-                            <div className = 'col'>
-                               Score 
-                            </div>
-                            
+                        <div className = 'col-6 col-sm-12 bg-light score-text d-flex align-items-center justify-content-center'>
+                               Score                           
                         </div>
-                        <div className = 'col-6 text-white d-flex p-0'>
+                        <div className = 'col-6 col-sm-12 text-white d-flex p-0'>
                             <div className = 'col p-3'> 
                                 <div 
                                     className = 'col rounded-circle bg-info score-number d-flex align-items-center justify-content-center'
