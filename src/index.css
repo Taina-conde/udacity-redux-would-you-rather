@@ -136,6 +136,7 @@ h3.card-title {
   text-transform: uppercase;
   text-align: center;
   border-right: 1px solid rgba(192, 191, 191, 0.7);
+  padding: 10%;
 
  
 }
@@ -186,12 +187,15 @@ h3.card-title {
     width: 60%;
   }
   
+  
 }
   
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+  .score-text {
+    padding: 30%;
+  }
 }
 
 

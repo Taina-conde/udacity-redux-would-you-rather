@@ -21,8 +21,8 @@ class Leaderboard extends React.Component {
 
 
         return (
-            <div>
-                <ul className = 'leaderboard-list'>
+            <div className = 'central m-auto'>
+                <ul className = 'leaderboard-list '>
                     {usersAndScoresArr.map( userScorePair => (
                         <li key = {userScorePair.user.id}>
                             <Leader

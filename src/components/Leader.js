@@ -18,7 +18,7 @@ function Leader(props) {
                         </div>
                     </div>
                     <div className= 'col-sm-6 d-flex flex-column justify-content-between'>
-                        <div>
+                        <div className = 'bg-warning'>
                             <h3>{user.name}</h3>
                         </div>
                         <div className = 'border-bottom d-flex justify-content-between'>
