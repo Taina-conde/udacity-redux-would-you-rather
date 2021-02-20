@@ -36,9 +36,9 @@ function Leader(props) {
                                Score                           
                         </div>
                         <div className = 'col-6 col-sm-12 text-white d-flex p-0'>
-                            <div className = 'col p-3'> 
+                            <div className = 'col d-flex p-3'> 
                                 <div 
-                                    className = 'col rounded-circle bg-info score-number d-flex align-items-center justify-content-center'
+                                    className = 'rounded-circle bg-info score-number d-flex align-items-center justify-content-center'
                                 >       {score}
                                 </div>
                             </div>
