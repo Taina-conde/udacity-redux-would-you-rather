@@ -24,7 +24,7 @@ function Leader(props) {
             
                     <div className = 'col-sm-3 user-avatar'>
                         <div className = {rankingClass}>
-
+                            <p>{ranking + 1}</p>
                         </div>
                         <div className = 'img-avatar rounded-circle'>
                             <img

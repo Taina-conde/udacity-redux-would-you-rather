@@ -167,8 +167,9 @@ h3.card-title {
 }
 .first-place {
   color: rgb(168, 126, 21);
+  border: 1px solid rgba(168, 126, 21, 0.3);
   font-weight: 900;
-  font-size: 0.7em;
+  font-size: 1.5em;
   width: 55px;
   height: 55px;
   text-align: center;
@@ -182,15 +183,17 @@ h3.card-title {
   border-radius: 27px;
   float: left;
   position:relative;
-  top: -35px;
-  left : -35px;
+  top: -60px;
+  left : -60px;
   background-color: goldenrod;
+  
   
 }
 .second-place {
   color: rgb(126, 125, 125);
+  border: 1px solid rgba(126, 125, 125, 0.3);
   font-weight: 900;
-  font-size: 0.7em;
+  font-size: 1.5em;
   width: 55px;
   height: 55px;
   text-align: center;
@@ -204,15 +207,16 @@ h3.card-title {
   border-radius: 27px;
   float: left;
   position:relative;
-  top: -35px;
-  left : -35px;
+  top: -60px;
+  left : -60px;
   background-color: silver;
   
 }
 .third-place {
-  color: #8d6036;
+  color: rgb(141, 96, 54);
+  border: 1px solid rgba(141, 96, 54, 0.3);
   font-weight: 900;
-  font-size: 0.7em;
+  font-size: 1.5em;
   width: 55px;
   height: 55px;
   text-align: center;
@@ -226,8 +230,8 @@ h3.card-title {
   border-radius: 27px;
   float: left;
   position:relative;
-  top: -35px;
-  left : -35px;
+  top: -60px;
+  left : -60px;
   background-color: #b87333;
   
 }
