@@ -6,13 +6,13 @@ function Leader(props) {
     const numQuestionsAsked = user.questions.length;
     let rankingClass = '';
     switch (ranking) {
-        case 1:
+        case 0:
             rankingClass = 'first-place';
             break
-        case 2:
+        case 1:
             rankingClass = 'second-place';
             break
-        case 3:
+        case 2:
             rankingClass = 'third-place';
             break
         default :
