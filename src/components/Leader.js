@@ -1,14 +1,31 @@
 import React from 'react';
 
 function Leader(props) {
-    const { user, score } = props;
+    const { user, score, ranking } = props;
     const numQuestionsAnswered = Object.keys(user.answers).length;
     const numQuestionsAsked = user.questions.length;
+    let rankingClass = '';
+    switch (ranking) {
+        case 1:
+            rankingClass = 'first-place';
+            break
+        case 2:
+            rankingClass = 'second-place';
+            break
+        case 3:
+            rankingClass = 'third-place';
+            break
+        default :
+            rankingClass = 'not-in-podium';
+    }
     return (
         <div className = 'rounded border mb-4'>
             <div className = 'd-sm-flex p-4'>
             
                     <div className = 'col-sm-3 user-avatar'>
+                        <div className = {rankingClass}>
+
+                        </div>
                         <div className = 'img-avatar rounded-circle'>
                             <img
                                 className = 'img-fluid rounded-circle avatar'

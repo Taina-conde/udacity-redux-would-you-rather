@@ -23,9 +23,10 @@ class Leaderboard extends React.Component {
         return (
             <div className = 'central m-auto'>
                 <ul className = 'leaderboard-list '>
-                    {usersAndScoresArr.map( userScorePair => (
+                    {usersAndScoresArr.map( (userScorePair, index) => (
                         <li key = {userScorePair.user.id}>
                             <Leader
+                                ranking = {index}
                                 user = {userScorePair.user}
                                 score = {userScorePair.score}
                             />
