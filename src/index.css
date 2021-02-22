@@ -165,6 +165,25 @@ h3.card-title {
     border-bottom: 1px solid rgba(192, 191, 191, 0.7);
   }
 }
+.first-place {
+  color: rgb(168, 126, 21);
+  font-weight: 900;
+  font-size: 0.7em;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  -moz-box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
+  box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
+  float: left;
+  position:relative;
+  top: -35px;
+  left : -35px;
+  background-color: goldenrod;
+  
+}
   
 
 /* Medium devices (landscape tablets, 768px and up) */
