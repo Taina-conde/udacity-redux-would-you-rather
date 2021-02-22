@@ -125,45 +125,23 @@ h3.card-title {
   box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
 }
 .score-number {
-  width: 60px;
-  height: 60px;
+  width: 40%;
   margin: auto;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
+}
+.score-number:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 .score-text {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   border-right: 1px solid rgba(192, 191, 191, 0.7);
-  padding: 10%;
 
  
-}
-
-/* Small devices (portrait tablets and large phones, 576px and up) */
-@media only screen and (min-width: 576px) {
-  
-  h3.card-title {
-    font-size: 2.3em;
-  }
-  .unanswered-content h3, .answered-content h3 {
-    text-align: left;
-    
-  }
-  .user-avatar {
-    border-bottom: none;
-    border-right: 1px solid #F2F2F2;
-    padding-right: 25px;
-  }
-  .img-avatar {
-    width: 100%;
-    
-  }
-  .score-text {
-    border-right: none;
-    border-bottom: 1px solid rgba(192, 191, 191, 0.7);
-  }
 }
 .first-place {
   color: rgb(168, 126, 21);
@@ -183,8 +161,8 @@ h3.card-title {
   border-radius: 27px;
   float: left;
   position:relative;
-  top: -60px;
-  left : -60px;
+  top: -20px;
+  left : -40px;
   background-color: goldenrod;
   
   
@@ -205,10 +183,10 @@ h3.card-title {
   -webkit-border-radius: 27px;
   -moz-border-radius: 27px;
   border-radius: 27px;
-  float: left;
+  float:left;
   position:relative;
-  top: -60px;
-  left : -60px;
+  top: -20px;
+  left : -40px;
   background-color: silver;
   
 }
@@ -230,14 +208,44 @@ h3.card-title {
   border-radius: 27px;
   float: left;
   position:relative;
-  top: -60px;
-  left : -60px;
+  top: -20px;
+  left : -40px;
   background-color: #b87333;
   
 }
 .not-in-podium {
   display: none;
 }
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+  
+  h3.card-title {
+    font-size: 2.3em;
+  }
+  .unanswered-content h3, .answered-content h3 {
+    text-align: left;
+    
+  }
+  .user-avatar {
+    border-bottom: none;
+    border-right: 1px solid #F2F2F2;
+    padding: 0 10px 0 0;
+    
+  }
+  .img-avatar {
+    width: 100%;
+    
+  }
+  .score-text {
+    border-right: none;
+    border-bottom: 1px solid rgba(192, 191, 191, 0.7);
+  }
+  .score-number {
+    font-size: 1.5em;
+  }
+}
+
   
 
 /* Medium devices (landscape tablets, 768px and up) */

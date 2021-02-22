@@ -19,13 +19,14 @@ function Leader(props) {
             rankingClass = 'not-in-podium';
     }
     return (
-        <div className = 'rounded border mb-4'>
-            <div className = 'd-sm-flex p-4'>
-            
+        <div className = 'rounded border mb-4 pr-4 pl-4'>
+            <div className = {rankingClass + ' d-inline'}>
+                {ranking + 1}
+            </div>
+            <div className = 'd-sm-flex float-none'>
+                    
                     <div className = 'col-sm-3 user-avatar'>
-                        <div className = {rankingClass}>
-                            <p>{ranking + 1}</p>
-                        </div>
+                        
                         <div className = 'img-avatar rounded-circle'>
                             <img
                                 className = 'img-fluid rounded-circle avatar'
