@@ -222,6 +222,9 @@ h3.card-title {
   background-color: #b87333;
   
 }
+.not-in-podium {
+  display: none;
+}
   
 
 /* Medium devices (landscape tablets, 768px and up) */
