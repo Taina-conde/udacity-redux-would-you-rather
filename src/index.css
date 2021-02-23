@@ -19,9 +19,7 @@ code {
   height: 30px;
   background-color: #BCA9F5;
 }
-.list-group-item {
-  border-top: none;
-}
+
 span.capitalize {
   text-transform: capitalize;
 }
@@ -39,6 +37,24 @@ h3.card-title {
   font-weight: 700;
   font-size: 1.7em;
 
+}
+.nav-tabs {
+  border-color: #057CFF;
+  color:rgba(95, 4, 180, 0.5);
+}
+.nav-tabs .nav-link.active {
+  color: #5F04B4;
+  background-color: #fff;
+  border-color: #057CFF #057CFF #fff;
+}
+.list-group-item {
+  border: none;
+}
+.dashboard-content {
+  border-width: 0 1px 1px 1px;
+  border-color:  #057CFF;
+  border-style: solid;
+  border-radius: 0 0 5px 5px;
 }
 .img-logo {
   width: 50%;

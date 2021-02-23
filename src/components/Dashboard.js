@@ -65,7 +65,7 @@ class Dashboard extends React.Component {
                         </div>
                     </li>
                 </ul>
-                <div>
+                <div className = 'dashboard-content'>
                     
                     {questionsShown === "unanswered" && (
                         <ul className = 'list-group'>
