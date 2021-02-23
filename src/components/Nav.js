@@ -4,7 +4,7 @@ import LogInfo from './LogInfo'
 
 export default function Nav() {
     return (
-        <nav className = 'navbar navbar-expand-md navbar-light mb-5'>
+        <nav className = 'navbar navbar-expand-md navbar-light bg-warning mb-5'>
             <div className = 'container'>
               <button 
                 className="navbar-toggler" 
