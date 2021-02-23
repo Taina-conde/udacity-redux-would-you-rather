@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import players from '../utils/avatars/players.png'
+import logo from '../utils/avatars/logo192.png'
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import InputGroup from 'react-bootstrap/InputGroup'
@@ -45,9 +45,9 @@ class LogInPage extends React.Component {
                 <div className = 'card-content'>
                     <div className = 'text-center'>
                         <img
-                            className = 'img-fluid img-players'
-                            src = {players}
-                            alt = 'players'
+                            className = 'img-fluid img-logo'
+                            src = {logo}
+                            alt = 'logo'
                         />
                     </div>
                     <div className = 'm-2'>

@@ -38,8 +38,9 @@ h3.card-title {
   font-size: 1.7em;
 
 }
-.img-players {
+.img-logo {
   width: 50%;
+  max-width: 192px;
 }
 .user-avatar {
   border-bottom: 1px solid #F2F2F2;
