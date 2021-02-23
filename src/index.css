@@ -39,6 +39,13 @@ h3.card-title {
   font-size: 1.7em;
 
 }
+.signIn-btn {
+  width: 198px;
+  margin: auto;
+}
+.login-form .input-group-text {
+  background-color: white;
+}
 .nav-tabs {
   border-color: rgba(5, 124, 255, 0.3);
   color:rgba(95, 4, 180, 0.5);

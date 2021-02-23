@@ -107,7 +107,7 @@ class LogInPage extends React.Component {
                             
                             
                                 <button 
-                                    className = 'btn btn-lg btn-primary mt-3'
+                                    className = 'btn btn-lg btn-primary mt-3 signIn-btn'
                                     type = 'submit' 
                                     disabled = {this.state.value === ""}
                                 >
