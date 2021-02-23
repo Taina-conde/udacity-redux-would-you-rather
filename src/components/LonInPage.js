@@ -35,7 +35,7 @@ class LogInPage extends React.Component {
             return <Redirect to = '/'/>
         }
         return (
-            <div className = 'card'>
+            <div className = 'card central m-auto'>
                 <div className = 'card-header text-center'>
                     <h4 className = 'card-title'>Would you rather?</h4>
                     <div className = 'card-text'>Let's play Would You Rather? Before we begin, sign in to continue.</div>
