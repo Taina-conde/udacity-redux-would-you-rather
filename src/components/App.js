@@ -19,9 +19,10 @@ class App extends React.Component {
   render() {
     return (
       <Router> 
-        <React.Fragment>  
+        <React.Fragment> 
+          <Nav/> 
           <div className = 'container'>
-            <Nav/>
+            
             {this.props.login === true 
               ? <LogInPage/>
               : <Switch>
