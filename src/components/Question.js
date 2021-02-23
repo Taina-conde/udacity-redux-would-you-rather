@@ -19,7 +19,7 @@ class Question extends React.Component {
                     <span>asks:</span>
                 </div>
                 <div className = 'card-body d-sm-flex pr-3 pl-3 pt-0 pb-1'>
-                    <div className = "user-avatar col-sm-4">
+                    <div className = "user-avatar col-sm-4 p-3">
                         <div className = 'rounded-circle img-avatar'>
                            <img 
                             src = {users[question.author].avatar.avatarURL} 
