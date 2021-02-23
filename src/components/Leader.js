@@ -19,7 +19,7 @@ function Leader(props) {
             rankingClass = 'not-in-podium';
     }
     return (
-        <div className = 'rounded border mb-4'>
+        <div className = 'rounded border mb-4 p-3 p-sm-1'>
             <div className = {rankingClass + ' d-inline'}>
                 {ranking + 1}
             </div>
@@ -37,7 +37,7 @@ function Leader(props) {
                         </div>
                     </div>
                     <div className= 'col-sm-6 d-flex flex-column justify-content-between p-2'>
-                        <div >
+                        <div>
                             <h3>{user.name}</h3>
                         </div>
                         <div className = 'border-bottom d-flex justify-content-between pb-3'>
@@ -57,7 +57,7 @@ function Leader(props) {
                             </div>
                             <div className = 'col-6 col-sm-12 text-white text-center p-3'>
                                     
-                                    <div className = 'bg-info score-number text-center'>       
+                                    <div className = 'score-number text-center'>       
                                         <div>{score}</div>
                                     </div>
                                    

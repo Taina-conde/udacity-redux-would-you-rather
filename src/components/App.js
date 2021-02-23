@@ -9,8 +9,7 @@ import NewQuestion from './NewQuestion';
 import Nav from './Nav';
 import LogInPage from './LonInPage';
 import NotFound from './NotFound';
-
-
+import Footer from './Footer';
 
 class App extends React.Component {
   componentDidMount() {
@@ -35,6 +34,7 @@ class App extends React.Component {
             } 
               
           </div>
+          <Footer/>
         </React.Fragment>
       </Router>
      

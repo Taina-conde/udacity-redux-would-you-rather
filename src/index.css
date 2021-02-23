@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f223;
 }
 
 code {
@@ -39,20 +40,20 @@ h3.card-title {
 
 }
 .nav-tabs {
-  border-color: #057CFF;
+  border-color: rgba(5, 124, 255, 0.3);
   color:rgba(95, 4, 180, 0.5);
 }
 .nav-tabs .nav-link.active {
   color: #5F04B4;
   background-color: #fff;
-  border-color: #057CFF #057CFF #fff;
+  border-color: rgba(5, 124, 255, 0.3) rgba(5, 124, 255, 0.3) #fff;
 }
 .list-group-item {
   border: none;
 }
 .dashboard-content {
   border-width: 0 1px 1px 1px;
-  border-color:  #057CFF;
+  border-color:  rgba(5, 124, 255, 0.3);
   border-style: solid;
   border-radius: 0 0 5px 5px;
 }
@@ -144,7 +145,7 @@ h3.card-title {
   box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
 }
 .score-number {
-  
+  background-color: rgba(5, 124, 255, 0.8);
   margin: auto;
   font-size: 1.3em;
   font-weight: bold;
@@ -243,6 +244,17 @@ h3.card-title {
 }
 .not-in-podium {
   display: none;
+}
+.footer {
+  text-align: center;
+  padding: 50px 0;
+}
+.footer a {
+  color: #ffc107;
+}
+.footer a:hover {
+  color: rgba(255, 193, 7, 0.6);
+  text-decoration: none;
 }
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
