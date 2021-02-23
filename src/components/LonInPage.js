@@ -66,7 +66,7 @@ class LogInPage extends React.Component {
                                                         src ={users[this.state.value].avatar.avatarURL} 
                                                         alt = {`Avatar of ${this.state.value}`}
                                                         
-                                                        className = 'login-img mr-2'
+                                                        className = 'login-img rounded-circle mr-2'
                                                         /> 
                                                     <div>{this.state.value}</div>
                                                 </div>
@@ -94,7 +94,7 @@ class LogInPage extends React.Component {
                                                     src = {users[user].avatar.avatarURL}
                                                     alt = {`Avatar of ${users[user].name}`}
                                                 
-                                                    className = 'login-img mr-2'
+                                                    className = 'login-img rounded-circle mr-2'
                                                 />
                                                 <div>{users[user].name}</div>
                                             </Dropdown.Item>
