@@ -26,7 +26,7 @@ class LogInfo extends React.Component {
                 />
                 <button
                     onClick = {this.handleClick}
-                    className = "btn btn-outline-danger btn-sm"
+                    className = "btn btn-outline-primary btn-sm"
                 >
                     Log out
                 </button>
