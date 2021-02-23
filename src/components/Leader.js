@@ -19,7 +19,7 @@ function Leader(props) {
             rankingClass = 'not-in-podium';
     }
     return (
-        <div className = 'rounded border mb-4 pr-4 pl-4'>
+        <div className = 'rounded border mb-4'>
             <div className = {rankingClass + ' d-inline'}>
                 {ranking + 1}
             </div>
@@ -50,18 +50,19 @@ function Leader(props) {
                         </div>
                     </div>
                     
-                    <div className = 'col-sm-3 d-flex flex-sm-column border p-0 score-box rounded m-2'>
-                        <div className = 'col-6 col-sm-12 bg-light score-text d-flex align-items-center justify-content-center'>
-                               Score                           
-                        </div>
-                        <div className = 'col-6 col-sm-12 text-white d-flex p-0'>
-                            <div className = 'col d-flex p-3'> 
-                                <div 
-                                    className = 'rounded-circle bg-info score-number d-flex align-items-center justify-content-center'
-                                >       {score}
-                                </div>
+                    <div className = 'col-sm-3 m-auto p-3'>
+                        <div className = "score-box border rounded d-flex flex-sm-column">
+                            <div className = 'col-6 col-sm-12 bg-light score-text d-flex align-items-center justify-content-center'>
+                                Score                           
                             </div>
-                            
+                            <div className = 'col-6 col-sm-12 text-white text-center p-3'>
+                                    
+                                    <div className = 'bg-info score-number text-center'>       
+                                        <div>{score}</div>
+                                    </div>
+                                   
+                                
+                            </div>
                         </div>
                     </div>
             </div> 

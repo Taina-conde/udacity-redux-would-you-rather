@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .central {
-  width: auto;
+  width: 100%;
 }
 .login-img {
   height: 30px;
@@ -119,22 +119,30 @@ h3.card-title {
   list-style: none;
 }
 .score-box {
-  
   -moz-box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
   -webkit-box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
   box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
 }
 .score-number {
-  width: 40%;
+  
   margin: auto;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
+  position: relative;
+  border-radius: 50%;
+  width: 40%;
+  height: auto;
+  padding-top: 40%;
 }
-.score-number:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+.score-number div {
+  position:absolute;
+  top:50%; 
+  left:50%;
+  transform: translate(-50%, -50%);
+  margin:0;
 }
+
+
 .score-text {
   font-weight: bold;
   text-transform: uppercase;
@@ -243,7 +251,11 @@ h3.card-title {
   }
   .score-number {
     font-size: 1.5em;
+    width: 100%;
+    padding-top: 100%;
   }
+  
+  
 }
 
   
