@@ -6,8 +6,7 @@ export default function Nav() {
     return (
         <nav className = 'navbar navbar-expand-md navbar-dark bg-info mb-5'>
             <div className = 'container'>
-                
-                    <button 
+                <button 
                         className="navbar-toggler" 
                         type="button" 
                         data-toggle="collapse" 
@@ -18,8 +17,6 @@ export default function Nav() {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <LogInfo/> 
-                    
                     <div 
                         className = "collapse navbar-collapse" 
                         id="navbarToggler"
@@ -42,6 +39,10 @@ export default function Nav() {
                                 </li>
                             </ul>
                     </div>
+                    
+                    <LogInfo/> 
+                    
+                    
                 
                 
                 
