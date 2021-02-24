@@ -19,7 +19,7 @@ class QuestionContent extends React.Component {
        const {dispatch, authedUser, qid } = this.props;
        const { answer } = this.state;
        dispatch(handleSaveAnswer({authedUser, qid, answer}));
-       this.props.history.push('/');
+       this.props.history.push(`/questions/${qid}`);
 
 
     }
