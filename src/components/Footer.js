@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer () {
     return (
-        <footer class = 'bg-dark text-white mt-5 footer'>
+        <footer className = 'bg-dark text-white mt-5 footer'>
             <div className = 'container'>
                 <div>
                     Icons made by &nbsp;
