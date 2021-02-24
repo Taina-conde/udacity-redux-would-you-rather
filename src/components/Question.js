@@ -7,8 +7,6 @@ import QuestionContent from './QuestionContent';
 class Question extends React.Component {
     render(){
         const { users, question, id, parent} = this.props;
-        console.log(question)
-        console.log('id: ', id)
         const optionOne = question.optionOne.text;
         const optionTwo = question.optionTwo.text;
         

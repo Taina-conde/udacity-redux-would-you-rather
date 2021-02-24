@@ -27,8 +27,6 @@ class QuestionContent extends React.Component {
     render() {
         const { question, user } = this.props;
         const userAnswered = Object.keys(user.answers).includes(question.id);
-        console.log(question)
-        console.log(user)
         if (userAnswered === true) {
             const numOptionOneVotes = question.optionOne.votes.length;
             const numOptionTwoVotes = question.optionTwo.votes.length; 

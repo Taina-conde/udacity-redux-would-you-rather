@@ -23,21 +23,12 @@ class Dashboard extends React.Component {
         const { questionsShown } = this.state;
         const { questionsIds, authedUser, users } = this.props;
         
-        
-        
-        console.log(this.props);
-        console.log(users[authedUser])
         let answeredQuestionsIds = [];
         let unansweredQuestionsIds = [];
         if (authedUser !== null) {
             answeredQuestionsIds = Object.keys(users[authedUser].answers)
             unansweredQuestionsIds = questionsIds.filter(questionId => (!answeredQuestionsIds.includes(questionId)))
-
-        }
-        
-       
-        
-        
+        }    
         return (
             <div className = 'container m-auto central'> 
                 <ul className = 'nav nav-tabs'>
@@ -71,7 +62,7 @@ class Dashboard extends React.Component {
                         <ul className = 'list-group'>
                             {unansweredQuestionsIds.map(questionId => (
                                 <li key = {questionId} className = 'list-group-item'>
-                                    {console.log("unanswered id: ",questionId)}
+                                    
                                     <Question 
                                         id = {questionId}
                                         parent = "dashboard"
@@ -87,7 +78,7 @@ class Dashboard extends React.Component {
                         <ul className = 'list-group'>
                             {answeredQuestionsIds.map(questionId => (
                                 <li key = {questionId} className = 'list-group-item'>
-                                    {console.log("answerd Id: ", questionId)}
+                                    
                                     <Question 
                                         id = {questionId}
                                         parent = "dashboard"

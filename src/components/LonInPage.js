@@ -13,7 +13,6 @@ class LogInPage extends React.Component {
         toHome: false
     }
     handleSelect = (event) => {
-        console.log(event)
         this.setState({
             value: event
         })
