@@ -31,7 +31,7 @@ class NewQuestion extends React.Component {
             return <Redirect to= '/'/>
         }
         return ( 
-            <div className = 'card mt-4'>
+            <div className = 'card mt-4 central m-auto'>
                 <div className = 'card-header text-center'>
                     <h1>Create new question</h1>
                 </div>
