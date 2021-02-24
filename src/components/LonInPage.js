@@ -53,7 +53,7 @@ class LogInPage extends React.Component {
                     <div className = 'm-2'>
                         <form  className = 'login-form' onSubmit = {this.handleSubmit}>
                             <div className = 'form-group d-flex flex-column'>
-                                <h3 className = 'card-title p-4'>Sign in</h3>
+                                <h3 className = 'card-title p-4 text-success'>Sign in</h3>
                                 <InputGroup className = 'justify-content-center' size = 'lg'>
                                 
                                     <InputGroup.Prepend >
@@ -79,7 +79,7 @@ class LogInPage extends React.Component {
                                         as = {InputGroup.Append}
                                         id="dropdown-basic-button" 
                                         title = ""
-                                        variant = 'outline-secondary'
+                                        variant = 'light'
                                         onSelect = {(e) => this.handleSelect(e)}
                                     >
                                         {Object.keys(users).map( user => (
@@ -107,7 +107,7 @@ class LogInPage extends React.Component {
                             
                             
                                 <button 
-                                    className = 'btn btn-lg btn-primary mt-3 signIn-btn'
+                                    className = 'btn btn-lg btn-success mt-3 signIn-btn'
                                     type = 'submit' 
                                     disabled = {this.state.value === ""}
                                 >

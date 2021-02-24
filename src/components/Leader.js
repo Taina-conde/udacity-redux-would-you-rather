@@ -57,7 +57,7 @@ function Leader(props) {
                             </div>
                             <div className = 'col-6 col-sm-12 text-white text-center p-3'>
                                     
-                                    <div className = 'score-number text-center'>       
+                                    <div className = 'score-number bg-info text-center'>       
                                         <div>{score}</div>
                                     </div>
                                    

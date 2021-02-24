@@ -4,9 +4,9 @@ import LogInfo from './LogInfo'
 
 export default function Nav() {
     return (
-        <nav className = 'navbar navbar-expand-md navbar-light bg-warning mb-5'>
+        <nav className = 'navbar navbar-expand-md navbar-dark bg-info mb-5'>
             <div className = 'container'>
-                
+                <div>
                     <button 
                         className="navbar-toggler" 
                         type="button" 
@@ -18,7 +18,7 @@ export default function Nav() {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <LogInfo/> 
+                    
                     <div 
                         className = "collapse navbar-collapse" 
                         id="navbarToggler"
@@ -41,9 +41,9 @@ export default function Nav() {
                                 </li>
                             </ul>
                     </div>
+                </div>
                 
-                
-                 
+                <LogInfo/> 
                 
                 
             </div>

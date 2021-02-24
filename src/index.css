@@ -19,7 +19,7 @@ code {
 }
 .login-img {
   height: 30px;
-  background-color: #BCA9F5;
+  background-color: #b3e6ba;
 }
 
 span.capitalize {
@@ -34,11 +34,13 @@ span.capitalize {
   
 }
 h3.card-title {
-  color: rgb(95, 4, 180);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
   font-size: 1.7em;
 
+}
+.btn-light {
+  border-color: #dee2e6;
 }
 .not-found {
   font-size: 8em;
@@ -48,24 +50,26 @@ h3.card-title {
   width: 198px;
   margin: auto;
 }
+
 .login-form .input-group-text {
   background-color: white;
 }
 .nav-tabs {
-  border-color: rgba(5, 124, 255, 0.3);
-  color:rgba(95, 4, 180, 0.5);
+  border-color: #17a2b8ba;
+  color:#28a745cf;
 }
 .nav-tabs .nav-link.active {
-  color: #5F04B4;
+  color: #28a745;
+  font-weight: 700;
   background-color: #fff;
-  border-color: rgba(5, 124, 255, 0.3) rgba(5, 124, 255, 0.3) #fff;
+  border-color: #17a2b8ba #17a2b8ba #fff;
 }
 .list-group-item {
   border: none;
 }
 .dashboard-content {
   border-width: 0 1px 1px 1px;
-  border-color:  rgba(5, 124, 255, 0.3);
+  border-color:  #17a2b8ba;
   border-style: solid;
   border-radius: 0 0 5px 5px;
 }
@@ -80,7 +84,7 @@ h3.card-title {
   
 }
 .img-avatar {
-  background-color: #BCA9F5;
+  background-color: #28a74547;
   width: 70%;
   padding: 10px;
   margin: auto;
@@ -157,7 +161,6 @@ h3.card-title {
   box-shadow: 1px 1px 1px 1px rgba(94, 91, 91, 0.4);
 }
 .score-number {
-  background-color: rgba(5, 124, 255, 0.8);
   margin: auto;
   font-size: 1.3em;
   font-weight: bold;
@@ -262,10 +265,10 @@ h3.card-title {
   padding: 50px 0;
 }
 .footer a {
-  color: #ffc107;
+  color: #28a745;
 }
 .footer a:hover {
-  color: rgba(255, 193, 7, 0.6);
+  color: #6dda86fd;
   text-decoration: none;
 }
 

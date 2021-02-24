@@ -41,7 +41,7 @@ class Question extends React.Component {
                                         
                                         <Link 
                                             to = {`/questions/${id}`}
-                                            className = 'btn btn-sm btn-outline-primary mt-2'
+                                            className = 'btn btn-sm btn-outline-info mt-2'
                                         >
                                             View poll
                                         </Link>                                     
