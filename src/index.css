@@ -13,6 +13,7 @@ code {
     monospace;
 }
 
+
 .central {
   width: 100%;
 }
@@ -33,11 +34,15 @@ span.capitalize {
   
 }
 h3.card-title {
-  color: #5F04B4;
+  color: rgb(95, 4, 180);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
   font-size: 1.7em;
 
+}
+.not-found {
+  font-size: 8em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .signIn-btn {
   width: 198px;
