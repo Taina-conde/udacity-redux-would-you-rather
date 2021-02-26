@@ -1,12 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import NotFound from './NotFound';
 
 import QuestionContent from './QuestionContent';
 
 class Question extends React.Component {
     render(){
         const { users, question, id, parent} = this.props;
+        if (question === undefined) {
+            return <NotFound/>
+        }
         const optionOne = question.optionOne.text;
         const optionTwo = question.optionTwo.text;
         
