@@ -13,7 +13,7 @@ import Footer from './Footer';
 
 class App extends React.Component {
   componentDidMount() {
-      this.props.dispatch(handleInitialData())
+      this.props.handleInitialData();
   }
   render() {
     return (
@@ -49,4 +49,4 @@ function mapStateToProps({ authedUser }) {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { handleInitialData })(App);
