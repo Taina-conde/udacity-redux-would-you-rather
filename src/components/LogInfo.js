@@ -1,18 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setAuthedUser } from '../actions/authedUser'
+import { Redirect } from 'react-router-dom';
 
 class LogInfo extends React.Component {
     handleClick = (event) => {
         event.preventDefault();
         const { dispatch } = this.props;
         dispatch(setAuthedUser(null));
+        
     }
+    
     render() {
         const { user } = this.props;
         if (user === undefined) {
-            return null
+            return <Redirect to= '/'/>
         }
+        
         return (
             <div className = 'navbar-text justify-content-end'>
                 
