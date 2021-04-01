@@ -6,9 +6,14 @@ This app is a game of questions and answers. The user is able to answer question
 
 To get started using this App:
 
-* fork and clone this repository
+* clone this repository with `git clone https://github.com/Taina-conde/udacity-redux-would-you-rather.git`
+* `cd udacity-redux-would-you-rather`
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
+
+## Demo
+
+https://user-images.githubusercontent.com/62517353/113333842-91bbbd00-92e8-11eb-9177-8b7fe1f19220.mov
 
 
 
