@@ -13,7 +13,8 @@ To get started using this App:
 
 ## Demo
 
-![Demo] (https://user-images.githubusercontent.com/62517353/113336105-7bfbc700-92eb-11eb-9533-4f5835f0b794.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/62517353/113336791-84a0cd00-92ec-11eb-9b0c-16cbb4430777.gif)
+
 
 
 
