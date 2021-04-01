@@ -67,7 +67,7 @@ class QuestionContent extends React.Component {
                                     aria-valuemin = "0"
                                     aria-valuemax = "100"
                                     >
-                                        {`${optionOnePercentage}%`}
+                                        {`${optionOnePercentage.toFixed(1)}%`}
                                 </div>
                             </div>
                             <div className = 'text-center font-weight-bold'>{ `${numOptionOneVotes} out of ${totalVotes} votes`} </div>
@@ -100,7 +100,7 @@ class QuestionContent extends React.Component {
                                     aria-valuemin = "0"
                                     aria-valuemax = "100"
                                 >
-                                        {`${optionTwoPercentage}%`}
+                                        {`${optionTwoPercentage.toFixed(1)}%`}
                                 </div>
                             </div>
                             <div className= 'text-center font-weight-bold'>{ `${numOptionTwoVotes} out of ${totalVotes} votes`} </div>
