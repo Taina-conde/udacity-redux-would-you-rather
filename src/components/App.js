@@ -16,11 +16,17 @@ class App extends React.Component {
       this.props.handleInitialData();
   }
   render() {
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    // Nav height + margin = 112 | Footer height + margin = 172
+    // Nav + Footer = 284
+    const minHeight = vh - 284
+    console.log('vh', vh)
+    console.log('minHeight', minHeight)
     return (
       <Router> 
         <React.Fragment> 
           <Nav/> 
-          <div className = 'container'>
+          <div className = 'container' style = {{minHeight: minHeight}}>
             
             {this.props.login === true 
               ? <LogInPage/>

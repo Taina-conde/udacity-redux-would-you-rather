@@ -13,6 +13,9 @@ code {
     monospace;
 }
 
+.app {
+  min-height:max-content;
+}
 
 .central {
   width: 100%;
