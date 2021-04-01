@@ -13,8 +13,7 @@ To get started using this App:
 
 ## Demo
 
-https://user-images.githubusercontent.com/62517353/113333842-91bbbd00-92e8-11eb-9177-8b7fe1f19220.mov
-
+https://user-images.githubusercontent.com/62517353/113334569-79986d80-92e9-11eb-8536-8c88201ba2f2.mov
 
 
 
